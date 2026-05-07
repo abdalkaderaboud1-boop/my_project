@@ -1,0 +1,53 @@
+{
+    "metadata": {
+        "service": "fingerprinting-api",
+        "target": "https://example.com/",
+        "host": "example.com",
+        "mode": "quick",
+        "timestamp": "2026-04-21T18:18:23.114100",
+        "status": "completed"
+    },
+    "results": {
+        "whatweb": {
+            "stdout": [
+                "\u001b[1m\u001b[34mhttps://example.com/\u001b[0m [200 OK] \u001b[1mAllow\u001b[0m[\u001b[1m\u001b[31mGET, HEAD\u001b[0m], \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mRESERVED\u001b[0m][\u001b[1m\u001b[31mZZ\u001b[0m], \u001b[1mHTML5\u001b[0m, \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36mcloudflare\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m172.66.147.243\u001b[0m], \u001b[1mTitle\u001b[0m[\u001b[1m\u001b[33mExample Domain\u001b[0m], \u001b[1mUncommonHeaders\u001b[0m[\u001b[0m\u001b[22mcf-cache-status,cf-ray\u001b[0m]"
+            ],
+            "stderr": [],
+            "returncode": 0
+        },
+        "wafw00f": {
+            "stdout": [
+                "\u001b[1;97m______",
+                "               \u001b[1;97m/      \\",
+                "              \u001b[1;97m(  W00f! )",
+                "               \u001b[1;97m\\  ____/",
+                "               \u001b[1;97m,,    \u001b[1;92m__            \u001b[1;93m404 Hack Not Found",
+                "           \u001b[1;96m|`-.__   \u001b[1;92m/ /                     \u001b[1;91m __     __",
+                "           \u001b[1;96m/\"  _/  \u001b[1;92m/_/                       \u001b[1;91m\\ \\   / /",
+                "          \u001b[1;94m*===*    \u001b[1;92m/                          \u001b[1;91m\\ \\_/ /  \u001b[1;93m405 Not Allowed",
+                "         \u001b[1;96m/     )__//                           \u001b[1;91m\\   /",
+                "    \u001b[1;96m/|  /     /---`                        \u001b[1;93m403 Forbidden",
+                "    \u001b[1;96m\\\\/`   \\ |                                 \u001b[1;91m/ _ \\",
+                "    \u001b[1;96m`\\    /_\\\\_              \u001b[1;93m502 Bad Gateway  \u001b[1;91m/ / \\ \\  \u001b[1;93m500 Internal Error",
+                "      \u001b[1;96m`_____``-`                             \u001b[1;91m/_/   \\_\\\\",
+                "",
+                "                        \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                "        The Web Application Firewall Fingerprinting Toolkit",
+                "    \u001b[0m",
+                "[*] Checking https://example.com/",
+                "[+] The site \u001b[1;94mhttps://example.com/\u001b[0m is behind \u001b[1;96mCloudflare (Cloudflare Inc.)\u001b[0m WAF.",
+                "[~] Number of requests: 2"
+            ],
+            "stderr": [],
+            "returncode": 0
+        },
+        "httprobe": {
+            "stdout": [
+                "http://example.com",
+                "https://example.com"
+            ],
+            "stderr": [],
+            "returncode": 0
+        }
+    }
+}
