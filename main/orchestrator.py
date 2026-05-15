@@ -187,16 +187,51 @@ class PipelineOrchestrator:
                     "started_at": self._now(),
                 },
                 "stages": {},
+                "pipeline_flow": [],
             }
+
+            pipeline_targets = [target]
 
             for service_name in SERVICE_ORDER:
                 if self.cancel_event.is_set():
                     report["metadata"]["status"] = "cancelled"
                     break
-                stage_result = self._run_stage(service_name, target, mode)
+                stage_result = self._run_stage(service_name, target, mode, pipeline_targets)
+                stage_result["input_targets"] = list(pipeline_targets)
                 report["stages"][service_name] = stage_result
                 self.active_job.setdefault("stages", []).append(stage_result)
                 self._write_state(self.active_job)
+
+                next_targets = self._derive_next_targets(service_name, stage_result, pipeline_targets)
+                report["pipeline_flow"].append(
+                    {
+                        "stage": service_name,
+                        "input_targets": list(pipeline_targets),
+                        "output_targets": list(next_targets),
+                        "input_count": len(pipeline_targets),
+                        "output_count": len(next_targets),
+                    }
+                )
+
+                if service_name == "recon":
+                    pipeline_targets = next_targets
+                    self.active_job["pipeline_targets"] = list(pipeline_targets)
+                    self.active_job["pipeline_flow"] = list(report["pipeline_flow"])
+                    self._write_state(self.active_job)
+                elif service_name == "scanner":
+                    pipeline_targets = next_targets
+                    self.active_job["pipeline_targets"] = list(pipeline_targets)
+                    self.active_job["pipeline_flow"] = list(report["pipeline_flow"])
+                    self._write_state(self.active_job)
+                elif service_name == "fingerprinting":
+                    pipeline_targets = next_targets
+                    self.active_job["pipeline_targets"] = list(pipeline_targets)
+                    self.active_job["pipeline_flow"] = list(report["pipeline_flow"])
+                    self._write_state(self.active_job)
+                elif service_name == "fuzzing":
+                    self.active_job["pipeline_targets"] = list(pipeline_targets)
+                    self.active_job["pipeline_flow"] = list(report["pipeline_flow"])
+                    self._write_state(self.active_job)
 
             report["metadata"]["completed_at"] = self._now()
             report["metadata"]["status"] = "cancelled" if self.cancel_event.is_set() else "completed"
@@ -239,7 +274,7 @@ class PipelineOrchestrator:
                     continue
             self.active_containers.clear()
 
-    def _run_stage(self, service_name: str, target: str, mode: str) -> dict[str, Any]:
+    def _run_stage(self, service_name: str, target: str, mode: str, targets: list[str]) -> dict[str, Any]:
         spec = self.specs[service_name]
         result_dir = self.runtime_root / service_name / "results"
         result_dir.mkdir(parents=True, exist_ok=True)
@@ -252,6 +287,7 @@ class PipelineOrchestrator:
             environment={
                 "TARGET_URL": target,
                 "SCAN_MODE": mode,
+                "TARGETS_JSON": json.dumps(targets),
             },
             volumes={str(result_dir): {"bind": "/app/results", "mode": "rw"}},
             remove=False,
@@ -281,6 +317,94 @@ class PipelineOrchestrator:
             "logs": logs,
             "status": "completed" if wait_result.get("StatusCode") == 0 else "failed",
         }
+
+    def _derive_targets_from_recon(self, stage_result: dict[str, Any], fallback_target: str) -> list[str]:
+        targets = [fallback_target]
+        result = stage_result.get("result")
+        if isinstance(result, dict):
+            results_section = result.get("results")
+            if isinstance(results_section, dict):
+                discovered_targets = results_section.get("subdomains")
+                if isinstance(discovered_targets, list):
+                    for item in discovered_targets:
+                        if isinstance(item, str) and item.strip():
+                            targets.append(item.strip())
+        return self._dedupe_targets(targets)
+
+    def _derive_targets_from_scanner(self, stage_result: dict[str, Any], fallback_targets: list[str]) -> list[str]:
+        targets = list(fallback_targets)
+        result = stage_result.get("result")
+        if isinstance(result, dict):
+            results_section = result.get("results")
+            if isinstance(results_section, dict):
+                per_target = results_section.get("per_target")
+                if isinstance(per_target, dict):
+                    for target_result in per_target.values():
+                        if not isinstance(target_result, dict):
+                            continue
+                        discovered_targets = target_result.get("discovered_targets")
+                        if isinstance(discovered_targets, list):
+                            for item in discovered_targets:
+                                if isinstance(item, str) and item.strip():
+                                    targets.append(item.strip())
+        return self._dedupe_targets(targets)
+
+    def _derive_targets_from_fingerprinting(self, stage_result: dict[str, Any], fallback_targets: list[str]) -> list[str]:
+        targets = list(fallback_targets)
+        result = stage_result.get("result")
+        if isinstance(result, dict):
+            results_section = result.get("results")
+            if isinstance(results_section, dict):
+                per_target = results_section.get("per_target")
+                if isinstance(per_target, dict):
+                    for target_result in per_target.values():
+                        if not isinstance(target_result, dict):
+                            continue
+                        discovered_targets = target_result.get("discovered_targets")
+                        if isinstance(discovered_targets, list):
+                            for item in discovered_targets:
+                                if isinstance(item, str) and item.strip():
+                                    targets.append(item.strip())
+        return self._dedupe_targets(targets)
+
+    def _derive_targets_from_fuzzing(self, stage_result: dict[str, Any], fallback_targets: list[str]) -> list[str]:
+        targets = list(fallback_targets)
+        result = stage_result.get("result")
+        if isinstance(result, dict):
+            results_section = result.get("results")
+            if isinstance(results_section, dict):
+                per_target = results_section.get("per_target")
+                if isinstance(per_target, dict):
+                    for target_result in per_target.values():
+                        if not isinstance(target_result, dict):
+                            continue
+                        discovered_targets = target_result.get("discovered_targets")
+                        if isinstance(discovered_targets, list):
+                            for item in discovered_targets:
+                                if isinstance(item, str) and item.strip():
+                                    targets.append(item.strip())
+        return self._dedupe_targets(targets)
+
+    def _derive_next_targets(self, service_name: str, stage_result: dict[str, Any], fallback_targets: list[str]) -> list[str]:
+        if service_name == "recon":
+            return self._derive_targets_from_recon(stage_result, fallback_targets[0] if fallback_targets else "")
+        if service_name == "scanner":
+            return self._derive_targets_from_scanner(stage_result, fallback_targets)
+        if service_name == "fingerprinting":
+            return self._derive_targets_from_fingerprinting(stage_result, fallback_targets)
+        if service_name == "fuzzing":
+            return self._derive_targets_from_fuzzing(stage_result, fallback_targets)
+        return self._dedupe_targets(fallback_targets)
+
+    def _dedupe_targets(self, targets: list[str]) -> list[str]:
+        seen = set()
+        ordered_targets = []
+        for target in targets:
+            cleaned = target.strip()
+            if cleaned and cleaned not in seen:
+                seen.add(cleaned)
+                ordered_targets.append(cleaned)
+        return ordered_targets
 
     def _resolve_result_path(self, spec: ServiceSpec, result_dir: Path) -> Path | None:
         if spec.result_file_name:

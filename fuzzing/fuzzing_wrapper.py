@@ -2,6 +2,9 @@ import subprocess
 import json
 import os
 import datetime
+import re
+import shlex
+from pathlib import Path
 
 DEFAULT_TARGET = "testphp.vulnweb.com"
 DEFAULT_MODE = "quick"
@@ -21,6 +24,36 @@ def normalize_target(target):
     if target.startswith("http://") or target.startswith("https://"):
         return target.rstrip("/")
     return f"http://{target.rstrip('/')}"
+
+
+def safe_filename(value):
+    return re.sub(r"[^A-Za-z0-9._-]+", "_", value).strip("_") or "target"
+
+
+def load_targets():
+    fallback = os.getenv("TARGET_URL", DEFAULT_TARGET)
+    raw_targets = os.getenv("TARGETS_JSON")
+    if not raw_targets:
+        return [normalize_target(fallback)]
+
+    try:
+        parsed = json.loads(raw_targets)
+    except json.JSONDecodeError:
+        return [normalize_target(fallback)]
+
+    if not isinstance(parsed, list):
+        return [normalize_target(fallback)]
+
+    targets = []
+    seen = set()
+    for item in parsed:
+        if isinstance(item, str):
+            normalized = normalize_target(item.strip())
+            if normalized and normalized not in seen:
+                seen.add(normalized)
+                targets.append(normalized)
+
+    return targets or [normalize_target(fallback)]
 
 
 def build_wordlist(mode):
@@ -57,40 +90,96 @@ def build_wordlist(mode):
     return wordlist_path
 
 
-def main():
-    target = os.getenv("TARGET_URL", DEFAULT_TARGET)
-    mode = os.getenv("SCAN_MODE", DEFAULT_MODE).lower()
+def extract_discovered_targets(ffuf_output, gobuster_output, base_url):
+    discovered = [base_url]
 
-    base_url = normalize_target(target)
-    wordlist = build_wordlist(mode)
+    try:
+        ffuf_data = json.loads(Path(ffuf_output).read_text())
+        results = ffuf_data.get("results", []) if isinstance(ffuf_data, dict) else []
+        if isinstance(results, list):
+            for item in results:
+                if not isinstance(item, dict):
+                    continue
+                url = item.get("url") or item.get("redirectlocation")
+                if isinstance(url, str) and url.strip():
+                    discovered.append(url.strip())
+    except Exception:
+        pass
+
+    try:
+        for line in Path(gobuster_output).read_text(errors="ignore").splitlines():
+            cleaned = line.strip()
+            if not cleaned:
+                continue
+            if cleaned.startswith("/"):
+                discovered.append(base_url.rstrip("/") + cleaned)
+            elif cleaned.startswith("http://") or cleaned.startswith("https://"):
+                discovered.append(cleaned)
+    except Exception:
+        pass
+
+    return list(dict.fromkeys(discovered))
+
+
+def main():
+    targets = load_targets()
+    mode = os.getenv("SCAN_MODE", DEFAULT_MODE).lower()
 
     report = {
         "metadata": {
             "container": "fuzzing_container",
-            "target": target,
+            "targets": targets,
             "mode": mode,
             "start_time": datetime.datetime.now().isoformat()
         },
         "results": {}
     }
 
-    ffuf_output = "/app/results/ffuf_output.json"
-    gobuster_output = "/app/results/gobuster_output.txt"
+    wordlist = build_wordlist(mode)
+    per_target_results = {}
 
-    if mode == "deep":
-        ffuf_cmd = f"ffuf -u {base_url}/FUZZ -w {wordlist} -of json -o {ffuf_output} -mc all -timeout 10"
-        gobuster_cmd = f"gobuster dir -u {base_url} -w {wordlist} -q -o {gobuster_output} -x php,txt,html,bak,old"
-    else:
-        ffuf_cmd = f"ffuf -u {base_url}/FUZZ -w {wordlist} -of json -o {ffuf_output} -mc all -timeout 10"
-        gobuster_cmd = f"gobuster dir -u {base_url} -w {wordlist} -q -o {gobuster_output}"
+    for target in targets:
+        base_url = normalize_target(target)
+        target_key = safe_filename(base_url)
+        ffuf_output = f"/app/results/ffuf_output_{target_key}.json"
+        gobuster_output = f"/app/results/gobuster_output_{target_key}.txt"
 
-    if run_tool("ffuf", ffuf_cmd):
-        report["results"]["ffuf_status"] = "Completed"
-        report["results"]["ffuf_output"] = ffuf_output
+        if mode == "deep":
+            ffuf_cmd = f"ffuf -u {shlex.quote(base_url + '/FUZZ')} -w {shlex.quote(wordlist)} -of json -o {shlex.quote(ffuf_output)} -mc all -timeout 10"
+            gobuster_cmd = f"gobuster dir -u {shlex.quote(base_url)} -w {shlex.quote(wordlist)} -q -o {shlex.quote(gobuster_output)} -x php,txt,html,bak,old"
+        else:
+            ffuf_cmd = f"ffuf -u {shlex.quote(base_url + '/FUZZ')} -w {shlex.quote(wordlist)} -of json -o {shlex.quote(ffuf_output)} -mc all -timeout 10"
+            gobuster_cmd = f"gobuster dir -u {shlex.quote(base_url)} -w {shlex.quote(wordlist)} -q -o {shlex.quote(gobuster_output)}"
 
-    if run_tool("gobuster", gobuster_cmd):
-        report["results"]["gobuster_status"] = "Completed"
-        report["results"]["gobuster_output"] = gobuster_output
+        ffuf_ok = run_tool("ffuf", ffuf_cmd)
+        gobuster_ok = run_tool("gobuster", gobuster_cmd)
+
+        per_target_results[target_key] = {
+            "target": target,
+            "base_url": base_url,
+            "ffuf_status": "Completed" if ffuf_ok else "Failed",
+            "ffuf_output": ffuf_output if ffuf_ok else None,
+            "gobuster_status": "Completed" if gobuster_ok else "Failed",
+            "gobuster_output": gobuster_output if gobuster_ok else None,
+            "discovered_targets": extract_discovered_targets(ffuf_output, gobuster_output, base_url)
+            if ffuf_ok or gobuster_ok
+            else [base_url],
+        }
+
+    report["results"]["per_target"] = per_target_results
+    report["results"]["discovered_targets"] = list(
+        dict.fromkeys(
+            target
+            for target_result in per_target_results.values()
+            for target in target_result.get("discovered_targets", [])
+        )
+    )
+    report["results"]["ffuf_status"] = "Completed" if all(
+        item["ffuf_status"] == "Completed" for item in per_target_results.values()
+    ) else "Partial"
+    report["results"]["gobuster_status"] = "Completed" if all(
+        item["gobuster_status"] == "Completed" for item in per_target_results.values()
+    ) else "Partial"
 
     with open("/app/results/fuzzing_master_report.json", "w") as f:
         json.dump(report, f, indent=4)

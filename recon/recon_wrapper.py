@@ -57,6 +57,7 @@ def main():
         "results": {
             "count": len(subdomains),
             "subdomains": list(subdomains),
+            "targets": [target, *sorted(subdomains)],
         },
     }
 

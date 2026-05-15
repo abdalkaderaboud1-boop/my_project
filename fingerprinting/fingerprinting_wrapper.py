@@ -1,6 +1,8 @@
 import datetime
 import json
 import os
+import re
+import shlex
 import subprocess
 from urllib.parse import urlparse
 
@@ -43,51 +45,108 @@ def normalize_target_url(target: str) -> str:
     return f"http://{target.rstrip('/')}"
 
 
+def safe_filename(value: str) -> str:
+    return re.sub(r"[^A-Za-z0-9._-]+", "_", value).strip("_") or "target"
+
+
+def load_targets() -> list[str]:
+    fallback = os.getenv("TARGET_URL", STATIC_TARGET)
+    raw_targets = os.getenv("TARGETS_JSON")
+    if not raw_targets:
+        return [normalize_target_url(fallback)]
+
+    try:
+        parsed = json.loads(raw_targets)
+    except json.JSONDecodeError:
+        return [normalize_target_url(fallback)]
+
+    if not isinstance(parsed, list):
+        return [normalize_target_url(fallback)]
+
+    targets = []
+    seen = set()
+    for item in parsed:
+        if isinstance(item, str):
+            normalized = normalize_target_url(item.strip())
+            if normalized and normalized not in seen:
+                seen.add(normalized)
+                targets.append(normalized)
+
+    return targets or [normalize_target_url(fallback)]
+
+
 def scan_website():
     """فحص الموقع والكشف عن التقنيات المستخدمة."""
     try:
-        target_url = normalize_target_url(os.getenv("TARGET_URL", STATIC_TARGET))
+        targets = load_targets()
         mode = os.getenv("SCAN_MODE", STATIC_MODE).lower().strip()
         if mode not in ["quick", "deep"]:
             mode = STATIC_MODE
 
-        host = extract_host(target_url)
+        print(f"\n[*] Fingerprinting Started | Targets: {targets} | Mode: {mode}")
 
-        print(f"\n[*] Fingerprinting Started | Target: {target_url} | Host: {host} | Mode: {mode}")
+        per_target_results = {}
 
-        results = {}
+        for target_url in targets:
+            host = extract_host(target_url)
+            target_key = safe_filename(host or target_url)
 
-        try:
-            results["whatweb"] = run_command(f"whatweb --no-errors -a 3 {target_url}", timeout=600)
-        except Exception as e:
-            results["whatweb"] = {"error": str(e)}
+            try:
+                whatweb_result = run_command(f"whatweb --no-errors -a 3 {shlex.quote(target_url)}", timeout=600)
+            except Exception as e:
+                whatweb_result = {"error": str(e)}
 
-        try:
-            results["wafw00f"] = run_command(f"wafw00f {target_url}", timeout=600)
-        except Exception as e:
-            results["wafw00f"] = {"error": str(e)}
+            try:
+                wafw00f_result = run_command(f"wafw00f {shlex.quote(target_url)}", timeout=600)
+            except Exception as e:
+                wafw00f_result = {"error": str(e)}
 
-        try:
-            if mode == "deep":
-                results["httprobe"] = run_command(
-                    f'echo "{host}" | httprobe -p http:80 -p https:443 -p http:8080 -p https:8443',
-                    timeout=300,
-                )
-            else:
-                results["httprobe"] = run_command(f'echo "{host}" | httprobe', timeout=300)
-        except Exception as e:
-            results["httprobe"] = {"error": str(e)}
+            try:
+                if mode == "deep":
+                    httprobe_cmd = (
+                        f'echo {shlex.quote(host)} | httprobe -p http:80 -p https:443 -p http:8080 -p https:8443'
+                    )
+                else:
+                    httprobe_cmd = f'echo {shlex.quote(host)} | httprobe'
+                httprobe_result = run_command(httprobe_cmd, timeout=300)
+            except Exception as e:
+                httprobe_result = {"error": str(e)}
+
+            discovered_targets = [target_url]
+            if isinstance(httprobe_result, dict):
+                stdout_lines = httprobe_result.get("stdout")
+                if isinstance(stdout_lines, list):
+                    for line in stdout_lines:
+                        if isinstance(line, str) and line.strip():
+                            discovered_targets.append(normalize_target_url(line.strip()))
+
+            per_target_results[target_key] = {
+                "target": target_url,
+                "host": host,
+                "whatweb": whatweb_result,
+                "wafw00f": wafw00f_result,
+                "httprobe": httprobe_result,
+                "discovered_targets": list(dict.fromkeys(discovered_targets)),
+            }
 
         report = {
             "metadata": {
                 "service": "fingerprinting-container",
-                "target": target_url,
-                "host": host,
+                "targets": targets,
                 "mode": mode,
                 "timestamp": datetime.datetime.now().isoformat(),
                 "status": "completed",
             },
-            "results": results,
+            "results": {
+                "per_target": per_target_results,
+                "discovered_targets": list(
+                    dict.fromkeys(
+                        target
+                        for target_result in per_target_results.values()
+                        for target in target_result.get("discovered_targets", [])
+                    )
+                ),
+            },
         }
 
         os.makedirs("/app/results", exist_ok=True)
