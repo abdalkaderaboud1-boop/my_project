@@ -1,0 +1,33 @@
+{
+    "metadata": {
+        "container": "network_scanner",
+        "targets": [
+            "www.youtube.com",
+            "www.www.youtube.com",
+            "images.www.youtube.com"
+        ],
+        "mode": "quick",
+        "start_time": "2026-05-22T20:38:21.393601"
+    },
+    "results": {
+        "per_target": {
+            "www.youtube.com": {
+                "nmap_status": "Failed",
+                "raw_xml": null,
+                "discovered_targets": []
+            },
+            "www.www.youtube.com": {
+                "nmap_status": "Failed",
+                "raw_xml": null,
+                "discovered_targets": []
+            },
+            "images.www.youtube.com": {
+                "nmap_status": "Failed",
+                "raw_xml": null,
+                "discovered_targets": []
+            }
+        },
+        "discovered_targets": [],
+        "nmap_status": "Partial"
+    }
+}

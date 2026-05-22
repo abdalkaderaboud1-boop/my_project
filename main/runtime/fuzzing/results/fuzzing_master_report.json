@@ -1,0 +1,115 @@
+{
+    "metadata": {
+        "container": "fuzzing_container",
+        "targets": [
+            "https://www.youtube.com",
+            "http://www.www.youtube.com",
+            "http://images.www.youtube.com",
+            "http://www.youtube.com"
+        ],
+        "mode": "quick",
+        "start_time": "2026-05-22T20:39:12.410119"
+    },
+    "results": {
+        "per_target": {
+            "https_www.youtube.com": {
+                "target": "https://www.youtube.com",
+                "base_url": "https://www.youtube.com",
+                "ffuf_status": "Completed",
+                "ffuf_output": "/app/results/ffuf_output_https_www.youtube.com.json",
+                "gobuster_status": "Failed",
+                "gobuster_output": null,
+                "discovered_targets": [
+                    "https://www.youtube.com",
+                    "https://www.youtube.com/robots.txt",
+                    "https://www.youtube.com/admin",
+                    "https://www.youtube.com/static",
+                    "https://www.youtube.com/login",
+                    "https://www.youtube.com/dashboard",
+                    "https://www.youtube.com/api",
+                    "https://www.youtube.com/backup",
+                    "https://www.youtube.com/config",
+                    "https://www.youtube.com/uploads",
+                    "https://www.youtube.com/tmp",
+                    "https://www.youtube.com/assets",
+                    "https://www.youtube.com/test"
+                ]
+            },
+            "http_www.www.youtube.com": {
+                "target": "http://www.www.youtube.com",
+                "base_url": "http://www.www.youtube.com",
+                "ffuf_status": "Completed",
+                "ffuf_output": "/app/results/ffuf_output_http_www.www.youtube.com.json",
+                "gobuster_status": "Failed",
+                "gobuster_output": null,
+                "discovered_targets": [
+                    "http://www.www.youtube.com"
+                ]
+            },
+            "http_images.www.youtube.com": {
+                "target": "http://images.www.youtube.com",
+                "base_url": "http://images.www.youtube.com",
+                "ffuf_status": "Completed",
+                "ffuf_output": "/app/results/ffuf_output_http_images.www.youtube.com.json",
+                "gobuster_status": "Failed",
+                "gobuster_output": null,
+                "discovered_targets": [
+                    "http://images.www.youtube.com"
+                ]
+            },
+            "http_www.youtube.com": {
+                "target": "http://www.youtube.com",
+                "base_url": "http://www.youtube.com",
+                "ffuf_status": "Completed",
+                "ffuf_output": "/app/results/ffuf_output_http_www.youtube.com.json",
+                "gobuster_status": "Failed",
+                "gobuster_output": null,
+                "discovered_targets": [
+                    "http://www.youtube.com",
+                    "http://www.youtube.com/static",
+                    "http://www.youtube.com/assets",
+                    "http://www.youtube.com/config",
+                    "http://www.youtube.com/api",
+                    "http://www.youtube.com/admin",
+                    "http://www.youtube.com/login",
+                    "http://www.youtube.com/tmp",
+                    "http://www.youtube.com/uploads",
+                    "http://www.youtube.com/test",
+                    "http://www.youtube.com/robots.txt",
+                    "http://www.youtube.com/backup"
+                ]
+            }
+        },
+        "discovered_targets": [
+            "https://www.youtube.com",
+            "https://www.youtube.com/robots.txt",
+            "https://www.youtube.com/admin",
+            "https://www.youtube.com/static",
+            "https://www.youtube.com/login",
+            "https://www.youtube.com/dashboard",
+            "https://www.youtube.com/api",
+            "https://www.youtube.com/backup",
+            "https://www.youtube.com/config",
+            "https://www.youtube.com/uploads",
+            "https://www.youtube.com/tmp",
+            "https://www.youtube.com/assets",
+            "https://www.youtube.com/test",
+            "http://www.www.youtube.com",
+            "http://images.www.youtube.com",
+            "http://www.youtube.com",
+            "http://www.youtube.com/static",
+            "http://www.youtube.com/assets",
+            "http://www.youtube.com/config",
+            "http://www.youtube.com/api",
+            "http://www.youtube.com/admin",
+            "http://www.youtube.com/login",
+            "http://www.youtube.com/tmp",
+            "http://www.youtube.com/uploads",
+            "http://www.youtube.com/test",
+            "http://www.youtube.com/robots.txt",
+            "http://www.youtube.com/backup"
+        ],
+        "ffuf_status": "Completed",
+        "gobuster_status": "Partial"
+    }
+}

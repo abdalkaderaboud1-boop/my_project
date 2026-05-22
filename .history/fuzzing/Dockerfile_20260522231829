@@ -1,10 +1,4 @@
-FROM golang:1.25-alpine
 
-RUN apk update && apk add --no-cache \
-    python3 \
-    bash \
-    git \
-    ca-certificates
 
 # إعداد بيئة Go لتثبيت أدوات الفuzzing
 ENV GOPATH /go

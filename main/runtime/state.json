@@ -1,0 +1,487 @@
+{
+    "job_id": "44ce741f-100f-4cb0-9029-c37ae439a2f1",
+    "target": "https://www.youtube.com/",
+    "mode": "quick",
+    "status": "completed",
+    "started_at": "2026-05-22T20:37:27+0000",
+    "stages": [
+        {
+            "service": "recon",
+            "container_id": "fc3a87544fcb7c60fb204f2b124baf9a1c18ace7b63599ce5144d91c9dec6d19",
+            "exit_code": 0,
+            "result_path": "/home/mohammed/Works/Project/my_project/main/runtime/recon/results/recon_report.json",
+            "result": {
+                "metadata": {
+                    "container": "recon_container",
+                    "target": "www.youtube.com",
+                    "mode": "quick",
+                    "timestamp": "2026-05-22T20:38:21.078924"
+                },
+                "results": {
+                    "count": 2,
+                    "subdomains": [
+                        "www.www.youtube.com",
+                        "images.www.youtube.com"
+                    ],
+                    "targets": [
+                        "www.youtube.com",
+                        "images.www.youtube.com",
+                        "www.www.youtube.com"
+                    ]
+                }
+            },
+            "logs": "[*] Recon Phase Started | Target: www.youtube.com | Mode: quick\n[+] Running Passive Discovery (Subfinder)...\n[*] Running: subfinder -d www.youtube.com -silent\n[-] Skipping Active Phase (Quick Mode selected)\n[✓] Recon finished. Total subdomains found: 2\n",
+            "status": "completed",
+            "input_targets": [
+                "https://www.youtube.com/"
+            ]
+        },
+        {
+            "service": "scanner",
+            "container_id": "dbbc36c54e29aa995644585d6674950249e06fefa9ad10c6615d85347a6bc449",
+            "exit_code": 0,
+            "result_path": "/home/mohammed/Works/Project/my_project/main/runtime/scanner/results/scanner_master_report.json",
+            "result": {
+                "metadata": {
+                    "container": "network_scanner",
+                    "targets": [
+                        "www.youtube.com",
+                        "www.www.youtube.com",
+                        "images.www.youtube.com"
+                    ],
+                    "mode": "quick",
+                    "start_time": "2026-05-22T20:38:21.393601"
+                },
+                "results": {
+                    "per_target": {
+                        "www.youtube.com": {
+                            "nmap_status": "Failed",
+                            "raw_xml": null,
+                            "discovered_targets": []
+                        },
+                        "www.www.youtube.com": {
+                            "nmap_status": "Failed",
+                            "raw_xml": null,
+                            "discovered_targets": []
+                        },
+                        "images.www.youtube.com": {
+                            "nmap_status": "Failed",
+                            "raw_xml": null,
+                            "discovered_targets": []
+                        }
+                    },
+                    "discovered_targets": [],
+                    "nmap_status": "Partial"
+                }
+            },
+            "logs": "Starting Nmap 7.94 ( https://nmap.org ) at 2026-05-22 20:38 UTC\nNSE: failed to initialize the script engine:\ncould not locate nse_main.lua\nstack traceback:\n\t[C]: in ?\n\nQUITTING!\nStarting Nmap 7.94 ( https://nmap.org ) at 2026-05-22 20:38 UTC\nNSE: failed to initialize the script engine:\ncould not locate nse_main.lua\nstack traceback:\n\t[C]: in ?\n\nQUITTING!\nStarting Nmap 7.94 ( https://nmap.org ) at 2026-05-22 20:38 UTC\nNSE: failed to initialize the script engine:\ncould not locate nse_main.lua\nstack traceback:\n\t[C]: in ?\n\nQUITTING!\n[*] Running Nmap...\n[!] Error in Nmap: Command 'nmap -F -sV --version-light -oX /app/results/nmap_output_www.youtube.com.xml www.youtube.com' returned non-zero exit status 1.\n[*] Running Nmap...\n[!] Error in Nmap: Command 'nmap -F -sV --version-light -oX /app/results/nmap_output_www.www.youtube.com.xml www.www.youtube.com' returned non-zero exit status 1.\n[*] Running Nmap...\n[!] Error in Nmap: Command 'nmap -F -sV --version-light -oX /app/results/nmap_output_images.www.youtube.com.xml images.www.youtube.com' returned non-zero exit status 1.\n[+] Scanner Container: Tasks finished.\n",
+            "status": "completed",
+            "input_targets": [
+                "https://www.youtube.com/",
+                "www.www.youtube.com",
+                "images.www.youtube.com"
+            ]
+        },
+        {
+            "service": "fingerprinting",
+            "container_id": "104b3a720d1daaa4b62d58c340e65f3082d7dc9ddc2d7939545a50a1ca632097",
+            "exit_code": 0,
+            "result_path": "/home/mohammed/Works/Project/my_project/main/runtime/fingerprinting/results/fingerprinting_report_20260522_203912.json",
+            "result": {
+                "metadata": {
+                    "service": "fingerprinting-container",
+                    "targets": [
+                        "https://www.youtube.com",
+                        "http://www.www.youtube.com",
+                        "http://images.www.youtube.com"
+                    ],
+                    "mode": "quick",
+                    "timestamp": "2026-05-22T20:39:12.102500",
+                    "status": "completed"
+                },
+                "results": {
+                    "per_target": {
+                        "www.youtube.com": {
+                            "target": "https://www.youtube.com",
+                            "host": "www.youtube.com",
+                            "whatweb": {
+                                "stdout": [
+                                    "\u001b[1m\u001b[34mhttps://www.youtube.com\u001b[0m [200 OK] \u001b[1mCookies\u001b[0m[\u001b[0m\u001b[22mGPS,VISITOR_INFO1_LIVE,VISITOR_PRIVACY_METADATA,YSC,__Secure-ROLLOUT_TOKEN,__Secure-YEC,__Secure-YNID\u001b[0m], \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mUNITED STATES\u001b[0m][\u001b[1m\u001b[31mUS\u001b[0m], \u001b[1mFrame\u001b[0m, \u001b[1mHTML5\u001b[0m, \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36mESF\u001b[0m], \u001b[1mHttpOnly\u001b[0m[\u001b[0m\u001b[22mGPS,VISITOR_INFO1_LIVE,VISITOR_PRIVACY_METADATA,YSC,__Secure-ROLLOUT_TOKEN,__Secure-YEC,__Secure-YNID\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m142.250.73.142\u001b[0m], \u001b[1mOpen-Graph-Protocol\u001b[0m[\u001b[1m\u001b[31m87741124305\u001b[0m], \u001b[1mOpenSearch\u001b[0m[\u001b[0m\u001b[22mhttps://www.youtube.com/opensearch?locale=en_US\u001b[0m], \u001b[1mScript\u001b[0m, \u001b[1mStrict-Transport-Security\u001b[0m[\u001b[0m\u001b[22mmax-age=31536000\u001b[0m], \u001b[1mTitle\u001b[0m[\u001b[1m\u001b[33mYouTube\u001b[0m], \u001b[1mUncommonHeaders\u001b[0m[\u001b[0m\u001b[22mx-content-type-options,content-security-policy,permissions-policy,cross-origin-opener-policy,accept-ch,report-to,origin-trial,reporting-endpoints,document-policy,alt-svc\u001b[0m], \u001b[1mX-Frame-Options\u001b[0m[\u001b[0m\u001b[22mSAMEORIGIN\u001b[0m], \u001b[1mX-UA-Compatible\u001b[0m[\u001b[0m\u001b[22mIE=edge\u001b[0m], \u001b[1mX-XSS-Protection\u001b[0m[\u001b[0m\u001b[22m0\u001b[0m]"
+                                ],
+                                "stderr": [],
+                                "returncode": 0
+                            },
+                            "wafw00f": {
+                                "stdout": [
+                                    "?              ,.   (   .      )        .      \"",
+                                    "         __        ??          (\"     )  )'     ,'        )  . (`     '`",
+                                    "    (___()'`;   ???          .; )  ' (( (\" )    ;(,     ((  (  ;)  \"  )\")",
+                                    "    /,___ /`                 _\"., ,._'_.,)_(..,( . )_  _' )_') (. _..( ' )",
+                                    "    \\\\   \\\\                 |____|____|____|____|____|____|____|____|____|",
+                                    "",
+                                    "                                ~ WAFW00F : v2.4.2 ~",
+                                    "                    ~ Sniffing Web Application Firewalls since 2009 ~",
+                                    "",
+                                    "[*] Checking https://www.youtube.com",
+                                    "[+] Generic Detection results:",
+                                    "[-] No WAF detected by the generic detection",
+                                    "[~] Number of requests: 7"
+                                ],
+                                "stderr": [],
+                                "returncode": 0
+                            },
+                            "httprobe": {
+                                "stdout": [
+                                    "http://www.youtube.com",
+                                    "https://www.youtube.com"
+                                ],
+                                "stderr": [],
+                                "returncode": 0
+                            },
+                            "discovered_targets": [
+                                "https://www.youtube.com",
+                                "http://www.youtube.com"
+                            ]
+                        },
+                        "www.www.youtube.com": {
+                            "target": "http://www.www.youtube.com",
+                            "host": "www.www.youtube.com",
+                            "whatweb": {
+                                "stdout": [],
+                                "stderr": [],
+                                "returncode": 0
+                            },
+                            "wafw00f": {
+                                "stdout": [
+                                    "\u001b[1;97m______",
+                                    "                  \u001b[1;97m/      \\",
+                                    "                 \u001b[1;97m(  Woof! )",
+                                    "                  \u001b[1;97m\\  ____/                      \u001b[1;91m)",
+                                    "                  \u001b[1;97m,,                           \u001b[1;91m) (\u001b[1;93m_",
+                                    "             \u001b[1;93m.-. \u001b[1;97m-    \u001b[1;92m_______                 \u001b[1;91m( \u001b[1;93m|__|",
+                                    "            \u001b[1;93m()``; \u001b[1;92m|==|_______)                \u001b[1;91m.)\u001b[1;93m|__|",
+                                    "            \u001b[1;93m/ ('        \u001b[1;92m/|\\                  \u001b[1;91m(  \u001b[1;93m|__|",
+                                    "        \u001b[1;93m(  /  )       \u001b[1;92m / | \\                  \u001b[1;91m. \u001b[1;93m|__|",
+                                    "         \u001b[1;93m\\(_)_))      \u001b[1;92m/  |  \\                   \u001b[1;93m|__|\u001b[0m",
+                                    "",
+                                    "                    \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                                    "    The Web Application Firewall Fingerprinting Toolkit",
+                                    "    \u001b[0m",
+                                    "[*] Checking http://www.www.youtube.com"
+                                ],
+                                "stderr": [
+                                    "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='www.www.youtube.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='www.www.youtube.com', port=80): Failed to resolve 'www.www.youtube.com' ([Errno -2] Name or service not known)\"))",
+                                    "ERROR:wafw00f:Site www.www.youtube.com appears to be down"
+                                ],
+                                "returncode": 0
+                            },
+                            "httprobe": {
+                                "stdout": [],
+                                "stderr": [],
+                                "returncode": 0
+                            },
+                            "discovered_targets": [
+                                "http://www.www.youtube.com"
+                            ]
+                        },
+                        "images.www.youtube.com": {
+                            "target": "http://images.www.youtube.com",
+                            "host": "images.www.youtube.com",
+                            "whatweb": {
+                                "stdout": [],
+                                "stderr": [],
+                                "returncode": 0
+                            },
+                            "wafw00f": {
+                                "stdout": [
+                                    "\u001b[1;97m______",
+                                    "               \u001b[1;97m/      \\",
+                                    "              \u001b[1;97m(  W00f! )",
+                                    "               \u001b[1;97m\\  ____/",
+                                    "               \u001b[1;97m,,    \u001b[1;92m__            \u001b[1;93m404 Hack Not Found",
+                                    "           \u001b[1;96m|`-.__   \u001b[1;92m/ /                     \u001b[1;91m __     __",
+                                    "           \u001b[1;96m/\"  _/  \u001b[1;92m/_/                       \u001b[1;91m\\ \\   / /",
+                                    "          \u001b[1;94m*===*    \u001b[1;92m/                          \u001b[1;91m\\ \\_/ /  \u001b[1;93m405 Not Allowed",
+                                    "         \u001b[1;96m/     )__//                           \u001b[1;91m\\   /",
+                                    "    \u001b[1;96m/|  /     /---`                        \u001b[1;93m403 Forbidden",
+                                    "    \u001b[1;96m\\\\/`   \\ |                                 \u001b[1;91m/ _ \\",
+                                    "    \u001b[1;96m`\\    /_\\\\_              \u001b[1;93m502 Bad Gateway  \u001b[1;91m/ / \\ \\  \u001b[1;93m500 Internal Error",
+                                    "      \u001b[1;96m`_____``-`                             \u001b[1;91m/_/   \\_\\\\",
+                                    "",
+                                    "                        \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                                    "        The Web Application Firewall Fingerprinting Toolkit",
+                                    "    \u001b[0m",
+                                    "[*] Checking http://images.www.youtube.com"
+                                ],
+                                "stderr": [
+                                    "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='images.www.youtube.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='images.www.youtube.com', port=80): Failed to resolve 'images.www.youtube.com' ([Errno -2] Name or service not known)\"))",
+                                    "ERROR:wafw00f:Site images.www.youtube.com appears to be down"
+                                ],
+                                "returncode": 0
+                            },
+                            "httprobe": {
+                                "stdout": [],
+                                "stderr": [],
+                                "returncode": 0
+                            },
+                            "discovered_targets": [
+                                "http://images.www.youtube.com"
+                            ]
+                        }
+                    },
+                    "discovered_targets": [
+                        "https://www.youtube.com",
+                        "http://www.youtube.com",
+                        "http://www.www.youtube.com",
+                        "http://images.www.youtube.com"
+                    ]
+                }
+            },
+            "logs": "[*] Fingerprinting container started\n\n[*] Fingerprinting Started | Targets: ['https://www.youtube.com', 'http://www.www.youtube.com', 'http://images.www.youtube.com'] | Mode: quick\n[*] Running: whatweb --no-errors -a 3 https://www.youtube.com\n[*] Running: wafw00f https://www.youtube.com\n[*] Running: echo www.youtube.com | httprobe\n[*] Running: whatweb --no-errors -a 3 http://www.www.youtube.com\n[*] Running: wafw00f http://www.www.youtube.com\n[*] Running: echo www.www.youtube.com | httprobe\n[*] Running: whatweb --no-errors -a 3 http://images.www.youtube.com\n[*] Running: wafw00f http://images.www.youtube.com\n[*] Running: echo images.www.youtube.com | httprobe\n[✓] Report saved: /app/results/fingerprinting_report_20260522_203912.json\n",
+            "status": "completed",
+            "input_targets": [
+                "https://www.youtube.com/",
+                "www.www.youtube.com",
+                "images.www.youtube.com"
+            ]
+        },
+        {
+            "service": "fuzzing",
+            "container_id": "d251030f7e5a870139c3c0f4553d5942920be5c5678b98667f010de48daeda89",
+            "exit_code": 0,
+            "result_path": "/home/mohammed/Works/Project/my_project/main/runtime/fuzzing/results/fuzzing_master_report.json",
+            "result": {
+                "metadata": {
+                    "container": "fuzzing_container",
+                    "targets": [
+                        "https://www.youtube.com",
+                        "http://www.www.youtube.com",
+                        "http://images.www.youtube.com",
+                        "http://www.youtube.com"
+                    ],
+                    "mode": "quick",
+                    "start_time": "2026-05-22T20:39:12.410119"
+                },
+                "results": {
+                    "per_target": {
+                        "https_www.youtube.com": {
+                            "target": "https://www.youtube.com",
+                            "base_url": "https://www.youtube.com",
+                            "ffuf_status": "Completed",
+                            "ffuf_output": "/app/results/ffuf_output_https_www.youtube.com.json",
+                            "gobuster_status": "Failed",
+                            "gobuster_output": null,
+                            "discovered_targets": [
+                                "https://www.youtube.com",
+                                "https://www.youtube.com/robots.txt",
+                                "https://www.youtube.com/admin",
+                                "https://www.youtube.com/static",
+                                "https://www.youtube.com/login",
+                                "https://www.youtube.com/dashboard",
+                                "https://www.youtube.com/api",
+                                "https://www.youtube.com/backup",
+                                "https://www.youtube.com/config",
+                                "https://www.youtube.com/uploads",
+                                "https://www.youtube.com/tmp",
+                                "https://www.youtube.com/assets",
+                                "https://www.youtube.com/test"
+                            ]
+                        },
+                        "http_www.www.youtube.com": {
+                            "target": "http://www.www.youtube.com",
+                            "base_url": "http://www.www.youtube.com",
+                            "ffuf_status": "Completed",
+                            "ffuf_output": "/app/results/ffuf_output_http_www.www.youtube.com.json",
+                            "gobuster_status": "Failed",
+                            "gobuster_output": null,
+                            "discovered_targets": [
+                                "http://www.www.youtube.com"
+                            ]
+                        },
+                        "http_images.www.youtube.com": {
+                            "target": "http://images.www.youtube.com",
+                            "base_url": "http://images.www.youtube.com",
+                            "ffuf_status": "Completed",
+                            "ffuf_output": "/app/results/ffuf_output_http_images.www.youtube.com.json",
+                            "gobuster_status": "Failed",
+                            "gobuster_output": null,
+                            "discovered_targets": [
+                                "http://images.www.youtube.com"
+                            ]
+                        },
+                        "http_www.youtube.com": {
+                            "target": "http://www.youtube.com",
+                            "base_url": "http://www.youtube.com",
+                            "ffuf_status": "Completed",
+                            "ffuf_output": "/app/results/ffuf_output_http_www.youtube.com.json",
+                            "gobuster_status": "Failed",
+                            "gobuster_output": null,
+                            "discovered_targets": [
+                                "http://www.youtube.com",
+                                "http://www.youtube.com/static",
+                                "http://www.youtube.com/assets",
+                                "http://www.youtube.com/config",
+                                "http://www.youtube.com/api",
+                                "http://www.youtube.com/admin",
+                                "http://www.youtube.com/login",
+                                "http://www.youtube.com/tmp",
+                                "http://www.youtube.com/uploads",
+                                "http://www.youtube.com/test",
+                                "http://www.youtube.com/robots.txt",
+                                "http://www.youtube.com/backup"
+                            ]
+                        }
+                    },
+                    "discovered_targets": [
+                        "https://www.youtube.com",
+                        "https://www.youtube.com/robots.txt",
+                        "https://www.youtube.com/admin",
+                        "https://www.youtube.com/static",
+                        "https://www.youtube.com/login",
+                        "https://www.youtube.com/dashboard",
+                        "https://www.youtube.com/api",
+                        "https://www.youtube.com/backup",
+                        "https://www.youtube.com/config",
+                        "https://www.youtube.com/uploads",
+                        "https://www.youtube.com/tmp",
+                        "https://www.youtube.com/assets",
+                        "https://www.youtube.com/test",
+                        "http://www.www.youtube.com",
+                        "http://images.www.youtube.com",
+                        "http://www.youtube.com",
+                        "http://www.youtube.com/static",
+                        "http://www.youtube.com/assets",
+                        "http://www.youtube.com/config",
+                        "http://www.youtube.com/api",
+                        "http://www.youtube.com/admin",
+                        "http://www.youtube.com/login",
+                        "http://www.youtube.com/tmp",
+                        "http://www.youtube.com/uploads",
+                        "http://www.youtube.com/test",
+                        "http://www.youtube.com/robots.txt",
+                        "http://www.youtube.com/backup"
+                    ],
+                    "ffuf_status": "Completed",
+                    "gobuster_status": "Partial"
+                }
+            },
+            "logs": "\n        /'___\\  /'___\\           /'___\\       \n       /\\ \\__/ /\\ \\__/  __  __  /\\ \\__/       \n       \\ \\ ,__\\\\ \\ ,__\\/\\ \\/\\ \\ \\ \\ ,__\\      \n        \\ \\ \\_/ \\ \\ \\_/\\ \\ \\_\\ \\ \\ \\ \\_/      \n         \\ \\_\\   \\ \\_\\  \\ \\____/  \\ \\_\\       \n          \\/_/    \\/_/   \\/___/    \\/_/       \n\n       v2.1.0-dev\n________________________________________________\n\n :: Method           : GET\n :: URL              : https://www.youtube.com/FUZZ\n :: Wordlist         : FUZZ: /tmp/fuzzing_wordlist.txt\n :: Output file      : /app/results/ffuf_output_https_www.youtube.com.json\n :: File format      : json\n :: Follow redirects : false\n :: Calibration      : false\n :: Timeout          : 10\n :: Threads          : 40\n :: Matcher          : Response status: all\n________________________________________________\n\n\r\u001b[2Krobots.txt              [Status: 200, Size: 766, Words: 50, Lines: 33, Duration: 387ms]\u001b[0m\n\r\u001b[2Kadmin                   [Status: 404, Size: 755, Words: 28, Lines: 1, Duration: 1022ms]\u001b[0m\n\r\u001b[2Kstatic                  [Status: 404, Size: 7046, Words: 486, Lines: 1, Duration: 2810ms]\u001b[0m\n\r\u001b[2Klogin                   [Status: 404, Size: 755, Words: 28, Lines: 1, Duration: 4024ms]\u001b[0m\n\r\u001b[2Kdashboard               [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 3464ms]\u001b[0m\n\r\u001b[2Kapi                     [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 413ms]\u001b[0m\n\r\u001b[2Kbackup                  [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 476ms]\u001b[0m\n\r\u001b[2Kconfig                  [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 469ms]\u001b[0m\n\r\u001b[2Kuploads                 [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 433ms]\u001b[0m\n\r\u001b[2Ktmp                     [Status: 404, Size: 755, Words: 28, Lines: 1, Duration: 2481ms]\u001b[0m\n\r\u001b[2Kassets                  [Status: 404, Size: 755, Words: 28, Lines: 1, Duration: 1633ms]\u001b[0m\n\r\u001b[2Ktest                    [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 2450ms]\u001b[0m\n\r\u001b[2K:: Progress: [1/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:01] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:02] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 1 req/sec :: Duration: [0:00:05] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:08] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:08] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:10] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:10] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:10] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:10] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 1 req/sec :: Duration: [0:00:15] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:17] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:20] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:20] :: Errors: 0 ::\n2026/05/22 20:39:42 error on running gobuster on https://www.youtube.com/: timeout occurred during the request\n\n        /'___\\  /'___\\           /'___\\       \n       /\\ \\__/ /\\ \\__/  __  __  /\\ \\__/       \n       \\ \\ ,__\\\\ \\ ,__\\/\\ \\/\\ \\ \\ \\ ,__\\      \n        \\ \\ \\_/ \\ \\ \\_/\\ \\ \\_\\ \\ \\ \\ \\_/      \n         \\ \\_\\   \\ \\_\\  \\ \\____/  \\ \\_\\       \n          \\/_/    \\/_/   \\/___/    \\/_/       \n\n       v2.1.0-dev\n________________________________________________\n\n :: Method           : GET\n :: URL              : http://www.www.youtube.com/FUZZ\n :: Wordlist         : FUZZ: /tmp/fuzzing_wordlist.txt\n :: Output file      : /app/results/ffuf_output_http_www.www.youtube.com.json\n :: File format      : json\n :: Follow redirects : false\n :: Calibration      : false\n :: Timeout          : 10\n :: Threads          : 40\n :: Matcher          : Response status: all\n________________________________________________\n\n\r\u001b[2K:: Progress: [1/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:03] :: Errors: 12 ::\n2026/05/22 20:39:46 error on running gobuster on http://www.www.youtube.com/: unable to connect to http://www.www.youtube.com/: Get \"http://www.www.youtube.com/\": dial tcp: lookup www.www.youtube.com on 10.2.0.1:53: no such host\n\n        /'___\\  /'___\\           /'___\\       \n       /\\ \\__/ /\\ \\__/  __  __  /\\ \\__/       \n       \\ \\ ,__\\\\ \\ ,__\\/\\ \\/\\ \\ \\ \\ ,__\\      \n        \\ \\ \\_/ \\ \\ \\_/\\ \\ \\_\\ \\ \\ \\ \\_/      \n         \\ \\_\\   \\ \\_\\  \\ \\____/  \\ \\_\\       \n          \\/_/    \\/_/   \\/___/    \\/_/       \n\n       v2.1.0-dev\n________________________________________________\n\n :: Method           : GET\n :: URL              : http://images.www.youtube.com/FUZZ\n :: Wordlist         : FUZZ: /tmp/fuzzing_wordlist.txt\n :: Output file      : /app/results/ffuf_output_http_images.www.youtube.com.json\n :: File format      : json\n :: Follow redirects : false\n :: Calibration      : false\n :: Timeout          : 10\n :: Threads          : 40\n :: Matcher          : Response status: all\n________________________________________________\n\n\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 12 ::\n2026/05/22 20:39:47 error on running gobuster on http://images.www.youtube.com/: unable to connect to http://images.www.youtube.com/: Get \"http://images.www.youtube.com/\": dial tcp: lookup images.www.youtube.com on 10.2.0.1:53: no such host\n\n        /'___\\  /'___\\           /'___\\       \n       /\\ \\__/ /\\ \\__/  __  __  /\\ \\__/       \n       \\ \\ ,__\\\\ \\ ,__\\/\\ \\/\\ \\ \\ \\ ,__\\      \n        \\ \\ \\_/ \\ \\ \\_/\\ \\ \\_\\ \\ \\ \\ \\_/      \n         \\ \\_\\   \\ \\_\\  \\ \\____/  \\ \\_\\       \n          \\/_/    \\/_/   \\/___/    \\/_/       \n\n       v2.1.0-dev\n________________________________________________\n\n :: Method           : GET\n :: URL              : http://www.youtube.com/FUZZ\n :: Wordlist         : FUZZ: /tmp/fuzzing_wordlist.txt\n :: Output file      : /app/results/ffuf_output_http_www.youtube.com.json\n :: File format      : json\n :: Follow redirects : false\n :: Calibration      : false\n :: Timeout          : 10\n :: Threads          : 40\n :: Matcher          : Response status: all\n________________________________________________\n\n\r\u001b[2Kstatic                  [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 912ms]\u001b[0m\n\r\u001b[2Kdashboard               [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 912ms]\u001b[0m\n\r\u001b[2Kassets                  [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 998ms]\u001b[0m\n\r\u001b[2Kconfig                  [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 1035ms]\u001b[0m\n\r\u001b[2Kapi                     [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 1099ms]\u001b[0m\n\r\u001b[2Kadmin                   [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 482ms]\u001b[0m\n\r\u001b[2Klogin                   [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 512ms]\u001b[0m\n\r\u001b[2Ktmp                     [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 390ms]\u001b[0m\n\r\u001b[2Kuploads                 [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 440ms]\u001b[0m\n\r\u001b[2Ktest                    [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 402ms]\u001b[0m\n\r\u001b[2Krobots.txt              [Status: 301, Size: 231, Words: 9, Lines: 7, Duration: 252ms]\u001b[0m\n\r\u001b[2Kbackup                  [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 265ms]\u001b[0m\n\r\u001b[2K:: Progress: [2/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:01] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:01] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:01] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 35 req/sec :: Duration: [0:00:01] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 32 req/sec :: Duration: [0:00:01] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 26 req/sec :: Duration: [0:00:01] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 12 req/sec :: Duration: [0:00:01] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 13 req/sec :: Duration: [0:00:01] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 15 req/sec :: Duration: [0:00:01] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 17 req/sec :: Duration: [0:00:02] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 16 req/sec :: Duration: [0:00:02] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 15 req/sec :: Duration: [0:00:02] :: Errors: 0 ::\r\u001b[2K:: Progress: [12/12] :: Job [1/1] :: 16 req/sec :: Duration: [0:00:02] :: Errors: 0 ::\n2026/05/22 20:39:50 the server returns a status code that matches the provided options for non existing urls. http://www.youtube.com/47c6085f-7df5-4a2c-bcd9-b90b8d906e83 => 301 (redirect to https://www.youtube.com/47c6085f-7df5-4a2c-bcd9-b90b8d906e83) (Length: 0). Please exclude the response length or the status code or set the wildcard option.. To continue please exclude the status code or the length\n[*] Running ffuf...\n[*] Running gobuster...\n[!] Error in gobuster: Command 'gobuster dir -u https://www.youtube.com -w /tmp/fuzzing_wordlist.txt -q -o /app/results/gobuster_output_https_www.youtube.com.txt' returned non-zero exit status 1.\n[*] Running ffuf...\n[*] Running gobuster...\n[!] Error in gobuster: Command 'gobuster dir -u http://www.www.youtube.com -w /tmp/fuzzing_wordlist.txt -q -o /app/results/gobuster_output_http_www.www.youtube.com.txt' returned non-zero exit status 1.\n[*] Running ffuf...\n[*] Running gobuster...\n[!] Error in gobuster: Command 'gobuster dir -u http://images.www.youtube.com -w /tmp/fuzzing_wordlist.txt -q -o /app/results/gobuster_output_http_images.www.youtube.com.txt' returned non-zero exit status 1.\n[*] Running ffuf...\n[*] Running gobuster...\n[!] Error in gobuster: Command 'gobuster dir -u http://www.youtube.com -w /tmp/fuzzing_wordlist.txt -q -o /app/results/gobuster_output_http_www.youtube.com.txt' returned non-zero exit status 1.\n[+] Fuzzing Container: Tasks finished.\n",
+            "status": "completed",
+            "input_targets": [
+                "https://www.youtube.com/",
+                "www.www.youtube.com",
+                "images.www.youtube.com",
+                "https://www.youtube.com",
+                "http://www.youtube.com",
+                "http://www.www.youtube.com",
+                "http://images.www.youtube.com"
+            ]
+        }
+    ],
+    "pipeline_targets": [
+        "https://www.youtube.com/",
+        "www.www.youtube.com",
+        "images.www.youtube.com",
+        "https://www.youtube.com",
+        "http://www.youtube.com",
+        "http://www.www.youtube.com",
+        "http://images.www.youtube.com"
+    ],
+    "pipeline_flow": [
+        {
+            "stage": "recon",
+            "input_targets": [
+                "https://www.youtube.com/"
+            ],
+            "output_targets": [
+                "https://www.youtube.com/",
+                "www.www.youtube.com",
+                "images.www.youtube.com"
+            ],
+            "input_count": 1,
+            "output_count": 3
+        },
+        {
+            "stage": "scanner",
+            "input_targets": [
+                "https://www.youtube.com/",
+                "www.www.youtube.com",
+                "images.www.youtube.com"
+            ],
+            "output_targets": [
+                "https://www.youtube.com/",
+                "www.www.youtube.com",
+                "images.www.youtube.com"
+            ],
+            "input_count": 3,
+            "output_count": 3
+        },
+        {
+            "stage": "fingerprinting",
+            "input_targets": [
+                "https://www.youtube.com/",
+                "www.www.youtube.com",
+                "images.www.youtube.com"
+            ],
+            "output_targets": [
+                "https://www.youtube.com/",
+                "www.www.youtube.com",
+                "images.www.youtube.com",
+                "https://www.youtube.com",
+                "http://www.youtube.com",
+                "http://www.www.youtube.com",
+                "http://images.www.youtube.com"
+            ],
+            "input_count": 3,
+            "output_count": 7
+        },
+        {
+            "stage": "fuzzing",
+            "input_targets": [
+                "https://www.youtube.com/",
+                "www.www.youtube.com",
+                "images.www.youtube.com",
+                "https://www.youtube.com",
+                "http://www.youtube.com",
+                "http://www.www.youtube.com",
+                "http://images.www.youtube.com"
+            ],
+            "output_targets": [
+                "https://www.youtube.com/",
+                "www.www.youtube.com",
+                "images.www.youtube.com",
+                "https://www.youtube.com",
+                "http://www.youtube.com",
+                "http://www.www.youtube.com",
+                "http://images.www.youtube.com",
+                "https://www.youtube.com/robots.txt",
+                "https://www.youtube.com/admin",
+                "https://www.youtube.com/static",
+                "https://www.youtube.com/login",
+                "https://www.youtube.com/dashboard",
+                "https://www.youtube.com/api",
+                "https://www.youtube.com/backup",
+                "https://www.youtube.com/config",
+                "https://www.youtube.com/uploads",
+                "https://www.youtube.com/tmp",
+                "https://www.youtube.com/assets",
+                "https://www.youtube.com/test",
+                "http://www.youtube.com/static",
+                "http://www.youtube.com/assets",
+                "http://www.youtube.com/config",
+                "http://www.youtube.com/api",
+                "http://www.youtube.com/admin",
+                "http://www.youtube.com/login",
+                "http://www.youtube.com/tmp",
+                "http://www.youtube.com/uploads",
+                "http://www.youtube.com/test",
+                "http://www.youtube.com/robots.txt",
+                "http://www.youtube.com/backup"
+            ],
+            "input_count": 7,
+            "output_count": 30
+        }
+    ],
+    "completed_at": "2026-05-22T20:39:50+0000",
+    "report_path": "/home/mohammed/Works/Project/my_project/main/runtime/master_report.json"
+}

@@ -1,0 +1,20 @@
+{
+    "metadata": {
+        "container": "recon_container",
+        "target": "www.youtube.com",
+        "mode": "quick",
+        "timestamp": "2026-05-22T20:38:21.078924"
+    },
+    "results": {
+        "count": 2,
+        "subdomains": [
+            "www.www.youtube.com",
+            "images.www.youtube.com"
+        ],
+        "targets": [
+            "www.youtube.com",
+            "images.www.youtube.com",
+            "www.www.youtube.com"
+        ]
+    }
+}

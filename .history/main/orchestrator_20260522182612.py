@@ -30,7 +30,7 @@ class ServiceSpec:
 class PipelineOrchestrator:
     def __init__(self) -> None:
         self.client = docker.from_env()
-        self.host_project_root = Path(os.getenv("HOST_PROJECT_ROOT", "/home/mohammed/Works/Project/my_project"))
+        self.host_project_root = Path(os.getenv("HOST_PROJECT_ROOT", "/home/mohammed/Works/Project/my_project))
         self.runtime_root = self.host_project_root / "main" / "runtime"
         self.master_report_path = self.runtime_root / "master_report.json"
         self.state_path = self.runtime_root / "state.json"

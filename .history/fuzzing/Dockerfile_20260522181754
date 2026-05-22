@@ -1,9 +1,11 @@
-FROM golang:1.25-alpine
+FROM alpine:3.19
 
+# تثبيت Python3 و Go و الأدوات المساعدة
 RUN apk update && apk add --no-cache \
     python3 \
-    bash \
+    go \
     git \
+    bash \
     ca-certificates
 
 # إعداد بيئة Go لتثبيت أدوات الفuzzing
