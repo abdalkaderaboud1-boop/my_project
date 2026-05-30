@@ -1,0 +1,56 @@
+{
+    "metadata": {
+        "container": "recon_container",
+        "target": "alepuniv.edu.sy",
+        "mode": "quick",
+        "timestamp": "2026-05-30T10:19:07.256525"
+    },
+    "results": {
+        "count": 20,
+        "subdomains": [
+            "api.alepuniv.edu.sy",
+            "plesk.alepuniv.edu.sy",
+            "e-learning.alepuniv.edu.sy",
+            "cdn.alepuniv.edu.sy",
+            "my.alepuniv.edu.sy",
+            "postmaster.alepuniv.edu.sy",
+            "researchjournal.alepuniv.edu.sy",
+            "ww2.alepuniv.edu.sy",
+            "click.alepuniv.edu.sy",
+            "webplesk.alepuniv.edu.sy",
+            "webmail.alepuniv.edu.sy",
+            "news.alepuniv.edu.sy",
+            "www.alepuniv.edu.sy",
+            "ns1.alepuniv.edu.sy",
+            "mailplesk.alepuniv.edu.sy",
+            "mail.alepuniv.edu.sy",
+            "mail.researchjournal.alepuniv.edu.sy",
+            "dev.alepuniv.edu.sy",
+            "ns2.alepuniv.edu.sy",
+            "rdashboard.researchjournal.alepuniv.edu.sy"
+        ],
+        "targets": [
+            "alepuniv.edu.sy",
+            "api.alepuniv.edu.sy",
+            "cdn.alepuniv.edu.sy",
+            "click.alepuniv.edu.sy",
+            "dev.alepuniv.edu.sy",
+            "e-learning.alepuniv.edu.sy",
+            "mail.alepuniv.edu.sy",
+            "mail.researchjournal.alepuniv.edu.sy",
+            "mailplesk.alepuniv.edu.sy",
+            "my.alepuniv.edu.sy",
+            "news.alepuniv.edu.sy",
+            "ns1.alepuniv.edu.sy",
+            "ns2.alepuniv.edu.sy",
+            "plesk.alepuniv.edu.sy",
+            "postmaster.alepuniv.edu.sy",
+            "rdashboard.researchjournal.alepuniv.edu.sy",
+            "researchjournal.alepuniv.edu.sy",
+            "webmail.alepuniv.edu.sy",
+            "webplesk.alepuniv.edu.sy",
+            "ww2.alepuniv.edu.sy",
+            "www.alepuniv.edu.sy"
+        ]
+    }
+}

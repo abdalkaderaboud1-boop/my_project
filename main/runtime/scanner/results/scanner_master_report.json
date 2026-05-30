@@ -1,0 +1,208 @@
+{
+    "metadata": {
+        "container": "network_scanner",
+        "targets": [
+            "alepuniv.edu.sy",
+            "api.alepuniv.edu.sy",
+            "plesk.alepuniv.edu.sy",
+            "e-learning.alepuniv.edu.sy",
+            "cdn.alepuniv.edu.sy",
+            "my.alepuniv.edu.sy",
+            "postmaster.alepuniv.edu.sy",
+            "researchjournal.alepuniv.edu.sy",
+            "ww2.alepuniv.edu.sy",
+            "click.alepuniv.edu.sy",
+            "webplesk.alepuniv.edu.sy",
+            "webmail.alepuniv.edu.sy",
+            "news.alepuniv.edu.sy",
+            "www.alepuniv.edu.sy",
+            "ns1.alepuniv.edu.sy",
+            "mailplesk.alepuniv.edu.sy",
+            "mail.alepuniv.edu.sy",
+            "mail.researchjournal.alepuniv.edu.sy",
+            "dev.alepuniv.edu.sy",
+            "ns2.alepuniv.edu.sy",
+            "rdashboard.researchjournal.alepuniv.edu.sy"
+        ],
+        "mode": "quick",
+        "start_time": "2026-05-30T10:19:07.650010"
+    },
+    "results": {
+        "per_target": {
+            "alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "api.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_api.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "plesk.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_plesk.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "e-learning.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_e-learning.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "cdn.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_cdn.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "my.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_my.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "postmaster.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_postmaster.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "researchjournal.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_researchjournal.alepuniv.edu.sy.xml",
+                "discovered_targets": [
+                    "researchjournal.alepuniv.edu.sy",
+                    "http://188.247.31.161:80",
+                    "https://188.247.31.161:80",
+                    "http://188.247.31.161:443",
+                    "https://188.247.31.161:443",
+                    "http://188.247.31.161:465",
+                    "https://188.247.31.161:465"
+                ]
+            },
+            "ww2.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_ww2.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "click.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_click.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "webplesk.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_webplesk.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "webmail.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_webmail.alepuniv.edu.sy.xml",
+                "discovered_targets": [
+                    "webmail.alepuniv.edu.sy",
+                    "http://213.178.227.168:80",
+                    "https://213.178.227.168:80",
+                    "http://213.178.227.168:443",
+                    "https://213.178.227.168:443",
+                    "http://213.178.227.168:465",
+                    "https://213.178.227.168:465",
+                    "http://213.178.227.168:993",
+                    "https://213.178.227.168:993",
+                    "http://213.178.227.168:995",
+                    "https://213.178.227.168:995",
+                    "http://213.178.227.168:8443",
+                    "https://213.178.227.168:8443"
+                ]
+            },
+            "news.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_news.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "www.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_www.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "ns1.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_ns1.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "mailplesk.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_mailplesk.alepuniv.edu.sy.xml",
+                "discovered_targets": [
+                    "mailplesk.alepuniv.edu.sy",
+                    "http://213.178.227.168:80",
+                    "https://213.178.227.168:80",
+                    "http://213.178.227.168:443",
+                    "https://213.178.227.168:443",
+                    "http://213.178.227.168:465",
+                    "https://213.178.227.168:465",
+                    "http://213.178.227.168:993",
+                    "https://213.178.227.168:993",
+                    "http://213.178.227.168:995",
+                    "https://213.178.227.168:995",
+                    "http://213.178.227.168:8443",
+                    "https://213.178.227.168:8443"
+                ]
+            },
+            "mail.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_mail.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "mail.researchjournal.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_mail.researchjournal.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "dev.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_dev.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "ns2.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_ns2.alepuniv.edu.sy.xml",
+                "discovered_targets": []
+            },
+            "rdashboard.researchjournal.alepuniv.edu.sy": {
+                "nmap_status": "Completed",
+                "raw_xml": "/app/results/nmap_output_rdashboard.researchjournal.alepuniv.edu.sy.xml",
+                "discovered_targets": [
+                    "rdashboard.researchjournal.alepuniv.edu.sy",
+                    "http://188.247.31.161:80",
+                    "https://188.247.31.161:80",
+                    "http://188.247.31.161:443",
+                    "https://188.247.31.161:443",
+                    "http://188.247.31.161:465",
+                    "https://188.247.31.161:465"
+                ]
+            }
+        },
+        "discovered_targets": [
+            "researchjournal.alepuniv.edu.sy",
+            "http://188.247.31.161:80",
+            "https://188.247.31.161:80",
+            "http://188.247.31.161:443",
+            "https://188.247.31.161:443",
+            "http://188.247.31.161:465",
+            "https://188.247.31.161:465",
+            "webmail.alepuniv.edu.sy",
+            "http://213.178.227.168:80",
+            "https://213.178.227.168:80",
+            "http://213.178.227.168:443",
+            "https://213.178.227.168:443",
+            "http://213.178.227.168:465",
+            "https://213.178.227.168:465",
+            "http://213.178.227.168:993",
+            "https://213.178.227.168:993",
+            "http://213.178.227.168:995",
+            "https://213.178.227.168:995",
+            "http://213.178.227.168:8443",
+            "https://213.178.227.168:8443",
+            "mailplesk.alepuniv.edu.sy",
+            "rdashboard.researchjournal.alepuniv.edu.sy"
+        ],
+        "nmap_status": "Completed"
+    }
+}

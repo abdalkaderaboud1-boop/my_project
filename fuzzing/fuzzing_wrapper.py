@@ -145,11 +145,11 @@ def main():
         gobuster_output = f"/app/results/gobuster_output_{target_key}.txt"
 
         if mode == "deep":
-            ffuf_cmd = f"ffuf -u {shlex.quote(base_url + '/FUZZ')} -w {shlex.quote(wordlist)} -of json -o {shlex.quote(ffuf_output)} -mc all -timeout 10"
-            gobuster_cmd = f"gobuster dir -u {shlex.quote(base_url)} -w {shlex.quote(wordlist)} -q -o {shlex.quote(gobuster_output)} -x php,txt,html,bak,old"
+            ffuf_cmd = f"ffuf -k -u {shlex.quote(base_url + '/FUZZ')} -w {shlex.quote(wordlist)} -of json -o {shlex.quote(ffuf_output)} -mc all -timeout 10"
+            gobuster_cmd = f"gobuster dir -k --retry -u {shlex.quote(base_url)} -w {shlex.quote(wordlist)} -q -o {shlex.quote(gobuster_output)} -x php,txt,html,bak,old || true"
         else:
-            ffuf_cmd = f"ffuf -u {shlex.quote(base_url + '/FUZZ')} -w {shlex.quote(wordlist)} -of json -o {shlex.quote(ffuf_output)} -mc all -timeout 10"
-            gobuster_cmd = f"gobuster dir -u {shlex.quote(base_url)} -w {shlex.quote(wordlist)} -q -o {shlex.quote(gobuster_output)}"
+            ffuf_cmd = f"ffuf -k -u {shlex.quote(base_url + '/FUZZ')} -w {shlex.quote(wordlist)} -of json -o {shlex.quote(ffuf_output)} -mc all -timeout 10"
+            gobuster_cmd = f"gobuster dir -k --retry -u {shlex.quote(base_url)} -w {shlex.quote(wordlist)} -q -o {shlex.quote(gobuster_output)} || true"
 
         ffuf_ok = run_tool("ffuf", ffuf_cmd)
         gobuster_ok = run_tool("gobuster", gobuster_cmd)

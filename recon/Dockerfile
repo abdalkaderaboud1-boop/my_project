@@ -1,9 +1,7 @@
 # استخدام Alpine كقاعدة خفيفة جداً
-FROM alpine:3.19
-
+FROM golang:1.24-alpine
 # تثبيت Go لبناء الأدوات، وبايثون للـ Wrapper، و Git للتحميل
 RUN apk update && apk add --no-cache \
-    go \
     python3 \
     bash \
     git \

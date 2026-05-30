@@ -1,0 +1,1371 @@
+{
+    "metadata": {
+        "service": "fingerprinting-container",
+        "targets": [
+            "http://alepuniv.edu.sy",
+            "http://www.alepuniv.edu.sy",
+            "http://dev.alepuniv.edu.sy",
+            "http://news.alepuniv.edu.sy",
+            "http://researchjournal.alepuniv.edu.sy",
+            "http://api.alepuniv.edu.sy",
+            "http://e-learning.alepuniv.edu.sy",
+            "http://click.alepuniv.edu.sy",
+            "http://ns2.alepuniv.edu.sy",
+            "http://mail.alepuniv.edu.sy",
+            "http://ww2.alepuniv.edu.sy",
+            "http://cdn.alepuniv.edu.sy",
+            "http://webplesk.alepuniv.edu.sy",
+            "http://webmail.alepuniv.edu.sy",
+            "http://mailplesk.alepuniv.edu.sy",
+            "http://plesk.alepuniv.edu.sy",
+            "http://mail.researchjournal.alepuniv.edu.sy",
+            "http://my.alepuniv.edu.sy",
+            "http://postmaster.alepuniv.edu.sy",
+            "http://rdashboard.researchjournal.alepuniv.edu.sy",
+            "http://ns1.alepuniv.edu.sy",
+            "http://188.247.31.161:80",
+            "https://188.247.31.161:80",
+            "http://188.247.31.161:443",
+            "https://188.247.31.161:443",
+            "http://188.247.31.161:465",
+            "https://188.247.31.161:465",
+            "http://213.178.227.168:80",
+            "https://213.178.227.168:80",
+            "http://213.178.227.168:443",
+            "https://213.178.227.168:443",
+            "http://213.178.227.168:465",
+            "https://213.178.227.168:465",
+            "http://213.178.227.168:993",
+            "https://213.178.227.168:993",
+            "http://213.178.227.168:995",
+            "https://213.178.227.168:995",
+            "http://213.178.227.168:8443",
+            "https://213.178.227.168:8443"
+        ],
+        "mode": "quick",
+        "timestamp": "2026-05-29T21:00:21.952843",
+        "status": "completed"
+    },
+    "results": {
+        "per_target": {
+            "alepuniv.edu.sy": {
+                "target": "http://alepuniv.edu.sy",
+                "host": "alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "               \u001b[1;97m/      \\",
+                        "              \u001b[1;97m(  W00f! )",
+                        "               \u001b[1;97m\\  ____/",
+                        "               \u001b[1;97m,,    \u001b[1;92m__            \u001b[1;93m404 Hack Not Found",
+                        "           \u001b[1;96m|`-.__   \u001b[1;92m/ /                     \u001b[1;91m __     __",
+                        "           \u001b[1;96m/\"  _/  \u001b[1;92m/_/                       \u001b[1;91m\\ \\   / /",
+                        "          \u001b[1;94m*===*    \u001b[1;92m/                          \u001b[1;91m\\ \\_/ /  \u001b[1;93m405 Not Allowed",
+                        "         \u001b[1;96m/     )__//                           \u001b[1;91m\\   /",
+                        "    \u001b[1;96m/|  /     /---`                        \u001b[1;93m403 Forbidden",
+                        "    \u001b[1;96m\\\\/`   \\ |                                 \u001b[1;91m/ _ \\",
+                        "    \u001b[1;96m`\\    /_\\\\_              \u001b[1;93m502 Bad Gateway  \u001b[1;91m/ / \\ \\  \u001b[1;93m500 Internal Error",
+                        "      \u001b[1;96m`_____``-`                             \u001b[1;91m/_/   \\_\\\\",
+                        "",
+                        "                        \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "        The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='alepuniv.edu.sy', port=80) at 0x7f8091489290>, 'Connection to alepuniv.edu.sy timed out. (connect timeout=7)'))",
+                        "ERROR:wafw00f:Site alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://alepuniv.edu.sy"
+                ]
+            },
+            "www.alepuniv.edu.sy": {
+                "target": "http://www.alepuniv.edu.sy",
+                "host": "www.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "                  \u001b[1;97m/      \\",
+                        "                 \u001b[1;97m(  Woof! )",
+                        "                  \u001b[1;97m\\  ____/                      \u001b[1;91m)",
+                        "                  \u001b[1;97m,,                           \u001b[1;91m) (\u001b[1;93m_",
+                        "             \u001b[1;93m.-. \u001b[1;97m-    \u001b[1;92m_______                 \u001b[1;91m( \u001b[1;93m|__|",
+                        "            \u001b[1;93m()``; \u001b[1;92m|==|_______)                \u001b[1;91m.)\u001b[1;93m|__|",
+                        "            \u001b[1;93m/ ('        \u001b[1;92m/|\\                  \u001b[1;91m(  \u001b[1;93m|__|",
+                        "        \u001b[1;93m(  /  )       \u001b[1;92m / | \\                  \u001b[1;91m. \u001b[1;93m|__|",
+                        "         \u001b[1;93m\\(_)_))      \u001b[1;92m/  |  \\                   \u001b[1;93m|__|\u001b[0m",
+                        "",
+                        "                    \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "    The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://www.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='www.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.alepuniv.edu.sy', port=80) at 0x7f1327d4d5d0>, 'Connection to www.alepuniv.edu.sy timed out. (connect timeout=7)'))",
+                        "ERROR:wafw00f:Site www.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://www.alepuniv.edu.sy"
+                ]
+            },
+            "dev.alepuniv.edu.sy": {
+                "target": "http://dev.alepuniv.edu.sy",
+                "host": "dev.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "?              ,.   (   .      )        .      \"",
+                        "         __        ??          (\"     )  )'     ,'        )  . (`     '`",
+                        "    (___()'`;   ???          .; )  ' (( (\" )    ;(,     ((  (  ;)  \"  )\")",
+                        "    /,___ /`                 _\"., ,._'_.,)_(..,( . )_  _' )_') (. _..( ' )",
+                        "    \\\\   \\\\                 |____|____|____|____|____|____|____|____|____|",
+                        "",
+                        "                                ~ WAFW00F : v2.4.2 ~",
+                        "                    ~ Sniffing Web Application Firewalls since 2009 ~",
+                        "",
+                        "[*] Checking http://dev.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='dev.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='dev.alepuniv.edu.sy', port=80): Failed to resolve 'dev.alepuniv.edu.sy' ([Errno -2] Name or service not known)\"))",
+                        "ERROR:wafw00f:Site dev.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://dev.alepuniv.edu.sy"
+                ]
+            },
+            "news.alepuniv.edu.sy": {
+                "target": "http://news.alepuniv.edu.sy",
+                "host": "news.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "                  \u001b[1;97m/      \\",
+                        "                 \u001b[1;97m(  Woof! )",
+                        "                  \u001b[1;97m\\  ____/                      \u001b[1;91m)",
+                        "                  \u001b[1;97m,,                           \u001b[1;91m) (\u001b[1;93m_",
+                        "             \u001b[1;93m.-. \u001b[1;97m-    \u001b[1;92m_______                 \u001b[1;91m( \u001b[1;93m|__|",
+                        "            \u001b[1;93m()``; \u001b[1;92m|==|_______)                \u001b[1;91m.)\u001b[1;93m|__|",
+                        "            \u001b[1;93m/ ('        \u001b[1;92m/|\\                  \u001b[1;91m(  \u001b[1;93m|__|",
+                        "        \u001b[1;93m(  /  )       \u001b[1;92m / | \\                  \u001b[1;91m. \u001b[1;93m|__|",
+                        "         \u001b[1;93m\\(_)_))      \u001b[1;92m/  |  \\                   \u001b[1;93m|__|\u001b[0m",
+                        "",
+                        "                    \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "    The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://news.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='news.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='news.alepuniv.edu.sy', port=80): Failed to resolve 'news.alepuniv.edu.sy' ([Errno -2] Name or service not known)\"))",
+                        "ERROR:wafw00f:Site news.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://news.alepuniv.edu.sy"
+                ]
+            },
+            "researchjournal.alepuniv.edu.sy": {
+                "target": "http://researchjournal.alepuniv.edu.sy",
+                "host": "researchjournal.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [
+                        "\u001b[1m\u001b[34mhttp://researchjournal.alepuniv.edu.sy\u001b[0m [301 Moved Permanently] \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mSYRIAN ARAB REPUBLIC\u001b[0m][\u001b[1m\u001b[31mSY\u001b[0m], \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36mnginx\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m188.247.31.161\u001b[0m], \u001b[1mRedirectLocation\u001b[0m[\u001b[0m\u001b[22mhttps://researchjournal.alepuniv.edu.sy/\u001b[0m], \u001b[1mTitle\u001b[0m[\u001b[1m\u001b[33m301 Moved Permanently\u001b[0m], \u001b[1mnginx\u001b[0m",
+                        "\u001b[1m\u001b[34mhttps://researchjournal.alepuniv.edu.sy/\u001b[0m [200 OK] \u001b[1mCookies\u001b[0m[\u001b[0m\u001b[22mi18n_redirected\u001b[0m], \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mSYRIAN ARAB REPUBLIC\u001b[0m][\u001b[1m\u001b[31mSY\u001b[0m], \u001b[1mEmail\u001b[0m[\u001b[0m\u001b[22malepuniv.rja@gmail.com,rs1journal@alepuniv.edu.sy\u001b[0m], \u001b[1mHTML5\u001b[0m, \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36mnginx\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m188.247.31.161\u001b[0m], \u001b[1mOpen-Graph-Protocol\u001b[0m[\u001b[1m\u001b[32mwebsite\u001b[0m], \u001b[1mPlesk\u001b[0m[\u001b[0m\u001b[22mLin\u001b[0m], \u001b[1mRuby-on-Rails\u001b[0m, \u001b[1mScript\u001b[0m, \u001b[1mTitle\u001b[0m[\u001b[1m\u001b[33m\u0645\u062c\u0644\u0629 \u0628\u062d\u0648\u062b \u062c\u0627\u0645\u0639\u0629 \u062d\u0644\u0628 - \u0627\u0644\u0645\u0648\u0642\u0639 \u0627\u0644\u0631\u0633\u0645\u064a \u0644\u0644\u0623\u0628\u062d\u0627\u062b \u0627\u0644\u0639\u0644\u0645\u064a\u0629 | Research Journal of Aleppo University\u001b[0m], \u001b[1mX-Powered-By\u001b[0m[\u001b[0m\u001b[22mExpress, Phusion Passenger(R) 6.1.2, PleskLin\u001b[0m], \u001b[1mnginx\u001b[0m"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "?              ,.   (   .      )        .      \"",
+                        "         __        ??          (\"     )  )'     ,'        )  . (`     '`",
+                        "    (___()'`;   ???          .; )  ' (( (\" )    ;(,     ((  (  ;)  \"  )\")",
+                        "    /,___ /`                 _\"., ,._'_.,)_(..,( . )_  _' )_') (. _..( ' )",
+                        "    \\\\   \\\\                 |____|____|____|____|____|____|____|____|____|",
+                        "",
+                        "                                ~ WAFW00F : v2.4.2 ~",
+                        "                    ~ Sniffing Web Application Firewalls since 2009 ~",
+                        "",
+                        "[*] Checking http://researchjournal.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='researchjournal.alepuniv.edu.sy', port=443): Read timed out. (read timeout=7)",
+                        "ERROR:wafw00f:Site researchjournal.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [
+                        "http://researchjournal.alepuniv.edu.sy"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://researchjournal.alepuniv.edu.sy"
+                ]
+            },
+            "api.alepuniv.edu.sy": {
+                "target": "http://api.alepuniv.edu.sy",
+                "host": "api.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "               \u001b[1;97m/      \\",
+                        "              \u001b[1;97m(  W00f! )",
+                        "               \u001b[1;97m\\  ____/",
+                        "               \u001b[1;97m,,    \u001b[1;92m__            \u001b[1;93m404 Hack Not Found",
+                        "           \u001b[1;96m|`-.__   \u001b[1;92m/ /                     \u001b[1;91m __     __",
+                        "           \u001b[1;96m/\"  _/  \u001b[1;92m/_/                       \u001b[1;91m\\ \\   / /",
+                        "          \u001b[1;94m*===*    \u001b[1;92m/                          \u001b[1;91m\\ \\_/ /  \u001b[1;93m405 Not Allowed",
+                        "         \u001b[1;96m/     )__//                           \u001b[1;91m\\   /",
+                        "    \u001b[1;96m/|  /     /---`                        \u001b[1;93m403 Forbidden",
+                        "    \u001b[1;96m\\\\/`   \\ |                                 \u001b[1;91m/ _ \\",
+                        "    \u001b[1;96m`\\    /_\\\\_              \u001b[1;93m502 Bad Gateway  \u001b[1;91m/ / \\ \\  \u001b[1;93m500 Internal Error",
+                        "      \u001b[1;96m`_____``-`                             \u001b[1;91m/_/   \\_\\\\",
+                        "",
+                        "                        \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "        The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://api.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='api.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='api.alepuniv.edu.sy', port=80) at 0x7f0535ab9210>, 'Connection to api.alepuniv.edu.sy timed out. (connect timeout=7)'))",
+                        "ERROR:wafw00f:Site api.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://api.alepuniv.edu.sy"
+                ]
+            },
+            "e-learning.alepuniv.edu.sy": {
+                "target": "http://e-learning.alepuniv.edu.sy",
+                "host": "e-learning.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "               \u001b[1;97m/      \\",
+                        "              \u001b[1;97m(  W00f! )",
+                        "               \u001b[1;97m\\  ____/",
+                        "               \u001b[1;97m,,    \u001b[1;92m__            \u001b[1;93m404 Hack Not Found",
+                        "           \u001b[1;96m|`-.__   \u001b[1;92m/ /                     \u001b[1;91m __     __",
+                        "           \u001b[1;96m/\"  _/  \u001b[1;92m/_/                       \u001b[1;91m\\ \\   / /",
+                        "          \u001b[1;94m*===*    \u001b[1;92m/                          \u001b[1;91m\\ \\_/ /  \u001b[1;93m405 Not Allowed",
+                        "         \u001b[1;96m/     )__//                           \u001b[1;91m\\   /",
+                        "    \u001b[1;96m/|  /     /---`                        \u001b[1;93m403 Forbidden",
+                        "    \u001b[1;96m\\\\/`   \\ |                                 \u001b[1;91m/ _ \\",
+                        "    \u001b[1;96m`\\    /_\\\\_              \u001b[1;93m502 Bad Gateway  \u001b[1;91m/ / \\ \\  \u001b[1;93m500 Internal Error",
+                        "      \u001b[1;96m`_____``-`                             \u001b[1;91m/_/   \\_\\\\",
+                        "",
+                        "                        \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "        The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://e-learning.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='e-learning.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='e-learning.alepuniv.edu.sy', port=80): Failed to resolve 'e-learning.alepuniv.edu.sy' ([Errno -2] Name or service not known)\"))",
+                        "ERROR:wafw00f:Site e-learning.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://e-learning.alepuniv.edu.sy"
+                ]
+            },
+            "click.alepuniv.edu.sy": {
+                "target": "http://click.alepuniv.edu.sy",
+                "host": "click.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "               \u001b[1;97m/      \\",
+                        "              \u001b[1;97m(  W00f! )",
+                        "               \u001b[1;97m\\  ____/",
+                        "               \u001b[1;97m,,    \u001b[1;92m__            \u001b[1;93m404 Hack Not Found",
+                        "           \u001b[1;96m|`-.__   \u001b[1;92m/ /                     \u001b[1;91m __     __",
+                        "           \u001b[1;96m/\"  _/  \u001b[1;92m/_/                       \u001b[1;91m\\ \\   / /",
+                        "          \u001b[1;94m*===*    \u001b[1;92m/                          \u001b[1;91m\\ \\_/ /  \u001b[1;93m405 Not Allowed",
+                        "         \u001b[1;96m/     )__//                           \u001b[1;91m\\   /",
+                        "    \u001b[1;96m/|  /     /---`                        \u001b[1;93m403 Forbidden",
+                        "    \u001b[1;96m\\\\/`   \\ |                                 \u001b[1;91m/ _ \\",
+                        "    \u001b[1;96m`\\    /_\\\\_              \u001b[1;93m502 Bad Gateway  \u001b[1;91m/ / \\ \\  \u001b[1;93m500 Internal Error",
+                        "      \u001b[1;96m`_____``-`                             \u001b[1;91m/_/   \\_\\\\",
+                        "",
+                        "                        \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "        The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://click.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='click.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='click.alepuniv.edu.sy', port=80): Failed to resolve 'click.alepuniv.edu.sy' ([Errno -2] Name or service not known)\"))",
+                        "ERROR:wafw00f:Site click.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://click.alepuniv.edu.sy"
+                ]
+            },
+            "ns2.alepuniv.edu.sy": {
+                "target": "http://ns2.alepuniv.edu.sy",
+                "host": "ns2.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "                  \u001b[1;97m/      \\",
+                        "                 \u001b[1;97m(  Woof! )",
+                        "                  \u001b[1;97m\\  ____/                      \u001b[1;91m)",
+                        "                  \u001b[1;97m,,                           \u001b[1;91m) (\u001b[1;93m_",
+                        "             \u001b[1;93m.-. \u001b[1;97m-    \u001b[1;92m_______                 \u001b[1;91m( \u001b[1;93m|__|",
+                        "            \u001b[1;93m()``; \u001b[1;92m|==|_______)                \u001b[1;91m.)\u001b[1;93m|__|",
+                        "            \u001b[1;93m/ ('        \u001b[1;92m/|\\                  \u001b[1;91m(  \u001b[1;93m|__|",
+                        "        \u001b[1;93m(  /  )       \u001b[1;92m / | \\                  \u001b[1;91m. \u001b[1;93m|__|",
+                        "         \u001b[1;93m\\(_)_))      \u001b[1;92m/  |  \\                   \u001b[1;93m|__|\u001b[0m",
+                        "",
+                        "                    \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "    The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://ns2.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='ns2.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='ns2.alepuniv.edu.sy', port=80) at 0x7fb5b7185150>, 'Connection to ns2.alepuniv.edu.sy timed out. (connect timeout=7)'))",
+                        "ERROR:wafw00f:Site ns2.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://ns2.alepuniv.edu.sy"
+                ]
+            },
+            "mail.alepuniv.edu.sy": {
+                "target": "http://mail.alepuniv.edu.sy",
+                "host": "mail.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "                  \u001b[1;97m/      \\",
+                        "                 \u001b[1;97m(  Woof! )",
+                        "                  \u001b[1;97m\\  ____/                      \u001b[1;91m)",
+                        "                  \u001b[1;97m,,                           \u001b[1;91m) (\u001b[1;93m_",
+                        "             \u001b[1;93m.-. \u001b[1;97m-    \u001b[1;92m_______                 \u001b[1;91m( \u001b[1;93m|__|",
+                        "            \u001b[1;93m()``; \u001b[1;92m|==|_______)                \u001b[1;91m.)\u001b[1;93m|__|",
+                        "            \u001b[1;93m/ ('        \u001b[1;92m/|\\                  \u001b[1;91m(  \u001b[1;93m|__|",
+                        "        \u001b[1;93m(  /  )       \u001b[1;92m / | \\                  \u001b[1;91m. \u001b[1;93m|__|",
+                        "         \u001b[1;93m\\(_)_))      \u001b[1;92m/  |  \\                   \u001b[1;93m|__|\u001b[0m",
+                        "",
+                        "                    \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "    The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://mail.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='mail.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='mail.alepuniv.edu.sy', port=80) at 0x7f5712dcd010>, 'Connection to mail.alepuniv.edu.sy timed out. (connect timeout=7)'))",
+                        "ERROR:wafw00f:Site mail.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://mail.alepuniv.edu.sy"
+                ]
+            },
+            "ww2.alepuniv.edu.sy": {
+                "target": "http://ww2.alepuniv.edu.sy",
+                "host": "ww2.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "               \u001b[1;97m/      \\",
+                        "              \u001b[1;97m(  W00f! )",
+                        "               \u001b[1;97m\\  ____/",
+                        "               \u001b[1;97m,,    \u001b[1;92m__            \u001b[1;93m404 Hack Not Found",
+                        "           \u001b[1;96m|`-.__   \u001b[1;92m/ /                     \u001b[1;91m __     __",
+                        "           \u001b[1;96m/\"  _/  \u001b[1;92m/_/                       \u001b[1;91m\\ \\   / /",
+                        "          \u001b[1;94m*===*    \u001b[1;92m/                          \u001b[1;91m\\ \\_/ /  \u001b[1;93m405 Not Allowed",
+                        "         \u001b[1;96m/     )__//                           \u001b[1;91m\\   /",
+                        "    \u001b[1;96m/|  /     /---`                        \u001b[1;93m403 Forbidden",
+                        "    \u001b[1;96m\\\\/`   \\ |                                 \u001b[1;91m/ _ \\",
+                        "    \u001b[1;96m`\\    /_\\\\_              \u001b[1;93m502 Bad Gateway  \u001b[1;91m/ / \\ \\  \u001b[1;93m500 Internal Error",
+                        "      \u001b[1;96m`_____``-`                             \u001b[1;91m/_/   \\_\\\\",
+                        "",
+                        "                        \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "        The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://ww2.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='ww2.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='ww2.alepuniv.edu.sy', port=80): Failed to resolve 'ww2.alepuniv.edu.sy' ([Errno -2] Name or service not known)\"))",
+                        "ERROR:wafw00f:Site ww2.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://ww2.alepuniv.edu.sy"
+                ]
+            },
+            "cdn.alepuniv.edu.sy": {
+                "target": "http://cdn.alepuniv.edu.sy",
+                "host": "cdn.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "               \u001b[1;97m/      \\",
+                        "              \u001b[1;97m(  W00f! )",
+                        "               \u001b[1;97m\\  ____/",
+                        "               \u001b[1;97m,,    \u001b[1;92m__            \u001b[1;93m404 Hack Not Found",
+                        "           \u001b[1;96m|`-.__   \u001b[1;92m/ /                     \u001b[1;91m __     __",
+                        "           \u001b[1;96m/\"  _/  \u001b[1;92m/_/                       \u001b[1;91m\\ \\   / /",
+                        "          \u001b[1;94m*===*    \u001b[1;92m/                          \u001b[1;91m\\ \\_/ /  \u001b[1;93m405 Not Allowed",
+                        "         \u001b[1;96m/     )__//                           \u001b[1;91m\\   /",
+                        "    \u001b[1;96m/|  /     /---`                        \u001b[1;93m403 Forbidden",
+                        "    \u001b[1;96m\\\\/`   \\ |                                 \u001b[1;91m/ _ \\",
+                        "    \u001b[1;96m`\\    /_\\\\_              \u001b[1;93m502 Bad Gateway  \u001b[1;91m/ / \\ \\  \u001b[1;93m500 Internal Error",
+                        "      \u001b[1;96m`_____``-`                             \u001b[1;91m/_/   \\_\\\\",
+                        "",
+                        "                        \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "        The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://cdn.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='cdn.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='cdn.alepuniv.edu.sy', port=80): Failed to resolve 'cdn.alepuniv.edu.sy' ([Errno -2] Name or service not known)\"))",
+                        "ERROR:wafw00f:Site cdn.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://cdn.alepuniv.edu.sy"
+                ]
+            },
+            "webplesk.alepuniv.edu.sy": {
+                "target": "http://webplesk.alepuniv.edu.sy",
+                "host": "webplesk.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "?              ,.   (   .      )        .      \"",
+                        "         __        ??          (\"     )  )'     ,'        )  . (`     '`",
+                        "    (___()'`;   ???          .; )  ' (( (\" )    ;(,     ((  (  ;)  \"  )\")",
+                        "    /,___ /`                 _\"., ,._'_.,)_(..,( . )_  _' )_') (. _..( ' )",
+                        "    \\\\   \\\\                 |____|____|____|____|____|____|____|____|____|",
+                        "",
+                        "                                ~ WAFW00F : v2.4.2 ~",
+                        "                    ~ Sniffing Web Application Firewalls since 2009 ~",
+                        "",
+                        "[*] Checking http://webplesk.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='webplesk.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='webplesk.alepuniv.edu.sy', port=80) at 0x7fa537571150>, 'Connection to webplesk.alepuniv.edu.sy timed out. (connect timeout=7)'))",
+                        "ERROR:wafw00f:Site webplesk.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://webplesk.alepuniv.edu.sy"
+                ]
+            },
+            "webmail.alepuniv.edu.sy": {
+                "target": "http://webmail.alepuniv.edu.sy",
+                "host": "webmail.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [
+                        "\u001b[1m\u001b[34mhttp://webmail.alepuniv.edu.sy\u001b[0m [301 Moved Permanently] \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mSYRIAN ARAB REPUBLIC\u001b[0m][\u001b[1m\u001b[31mSY\u001b[0m], \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36mnginx\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m213.178.227.168\u001b[0m], \u001b[1mRedirectLocation\u001b[0m[\u001b[0m\u001b[22mhttps://webmail.alepuniv.edu.sy/\u001b[0m], \u001b[1mTitle\u001b[0m[\u001b[1m\u001b[33m301 Moved Permanently\u001b[0m], \u001b[1mnginx\u001b[0m",
+                        "\u001b[1m\u001b[34mhttps://webmail.alepuniv.edu.sy/\u001b[0m [200 OK] \u001b[1mBootstrap\u001b[0m, \u001b[1mContent-Language\u001b[0m[\u001b[0m\u001b[22men\u001b[0m], \u001b[1mCookies\u001b[0m[\u001b[0m\u001b[22mroundcube_sessid\u001b[0m], \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mSYRIAN ARAB REPUBLIC\u001b[0m][\u001b[1m\u001b[31mSY\u001b[0m], \u001b[1mHTML5\u001b[0m, \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36mnginx\u001b[0m], \u001b[1mHttpOnly\u001b[0m[\u001b[0m\u001b[22mroundcube_sessid\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m213.178.227.168\u001b[0m], \u001b[1mJQuery\u001b[0m, \u001b[1mPHP\u001b[0m[\u001b[1m\u001b[32m8.3.31\u001b[0m], \u001b[1mPasswordField\u001b[0m[\u001b[0m\u001b[22m_pass\u001b[0m], \u001b[1mRoundCube\u001b[0m, \u001b[1mScript\u001b[0m, \u001b[1mTitle\u001b[0m[\u001b[1m\u001b[33mRoundcube Webmail :: Welcome to Roundcube Webmail\u001b[0m], \u001b[1mUncommonHeaders\u001b[0m[\u001b[0m\u001b[22mx-robots-tag\u001b[0m], \u001b[1mX-Frame-Options\u001b[0m[\u001b[0m\u001b[22msameorigin\u001b[0m], \u001b[1mX-Powered-By\u001b[0m[\u001b[0m\u001b[22mPHP/8.3.31\u001b[0m], \u001b[1mnginx\u001b[0m"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "               \u001b[1;97m/      \\",
+                        "              \u001b[1;97m(  W00f! )",
+                        "               \u001b[1;97m\\  ____/",
+                        "               \u001b[1;97m,,    \u001b[1;92m__            \u001b[1;93m404 Hack Not Found",
+                        "           \u001b[1;96m|`-.__   \u001b[1;92m/ /                     \u001b[1;91m __     __",
+                        "           \u001b[1;96m/\"  _/  \u001b[1;92m/_/                       \u001b[1;91m\\ \\   / /",
+                        "          \u001b[1;94m*===*    \u001b[1;92m/                          \u001b[1;91m\\ \\_/ /  \u001b[1;93m405 Not Allowed",
+                        "         \u001b[1;96m/     )__//                           \u001b[1;91m\\   /",
+                        "    \u001b[1;96m/|  /     /---`                        \u001b[1;93m403 Forbidden",
+                        "    \u001b[1;96m\\\\/`   \\ |                                 \u001b[1;91m/ _ \\",
+                        "    \u001b[1;96m`\\    /_\\\\_              \u001b[1;93m502 Bad Gateway  \u001b[1;91m/ / \\ \\  \u001b[1;93m500 Internal Error",
+                        "      \u001b[1;96m`_____``-`                             \u001b[1;91m/_/   \\_\\\\",
+                        "",
+                        "                        \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "        The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://webmail.alepuniv.edu.sy",
+                        "[+] Generic Detection results:",
+                        "[-] No WAF detected by the generic detection",
+                        "[~] Number of requests: 7"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [
+                        "https://webmail.alepuniv.edu.sy",
+                        "http://webmail.alepuniv.edu.sy"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://webmail.alepuniv.edu.sy",
+                    "https://webmail.alepuniv.edu.sy"
+                ]
+            },
+            "mailplesk.alepuniv.edu.sy": {
+                "target": "http://mailplesk.alepuniv.edu.sy",
+                "host": "mailplesk.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [
+                        "\u001b[1m\u001b[34mhttp://mailplesk.alepuniv.edu.sy\u001b[0m [200 OK] \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mSYRIAN ARAB REPUBLIC\u001b[0m][\u001b[1m\u001b[31mSY\u001b[0m], \u001b[1mHTML5\u001b[0m, \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36mnginx\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m213.178.227.168\u001b[0m], \u001b[1mScript\u001b[0m, \u001b[1mTitle\u001b[0m[\u001b[1m\u001b[33mWeb Server's Default Page\u001b[0m], \u001b[1mnginx\u001b[0m"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "                  \u001b[1;97m/      \\",
+                        "                 \u001b[1;97m(  Woof! )",
+                        "                  \u001b[1;97m\\  ____/                      \u001b[1;91m)",
+                        "                  \u001b[1;97m,,                           \u001b[1;91m) (\u001b[1;93m_",
+                        "             \u001b[1;93m.-. \u001b[1;97m-    \u001b[1;92m_______                 \u001b[1;91m( \u001b[1;93m|__|",
+                        "            \u001b[1;93m()``; \u001b[1;92m|==|_______)                \u001b[1;91m.)\u001b[1;93m|__|",
+                        "            \u001b[1;93m/ ('        \u001b[1;92m/|\\                  \u001b[1;91m(  \u001b[1;93m|__|",
+                        "        \u001b[1;93m(  /  )       \u001b[1;92m / | \\                  \u001b[1;91m. \u001b[1;93m|__|",
+                        "         \u001b[1;93m\\(_)_))      \u001b[1;92m/  |  \\                   \u001b[1;93m|__|\u001b[0m",
+                        "",
+                        "                    \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "    The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://mailplesk.alepuniv.edu.sy",
+                        "[+] Generic Detection results:",
+                        "[-] No WAF detected by the generic detection",
+                        "[~] Number of requests: 7"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [
+                        "http://mailplesk.alepuniv.edu.sy",
+                        "https://mailplesk.alepuniv.edu.sy"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://mailplesk.alepuniv.edu.sy",
+                    "https://mailplesk.alepuniv.edu.sy"
+                ]
+            },
+            "plesk.alepuniv.edu.sy": {
+                "target": "http://plesk.alepuniv.edu.sy",
+                "host": "plesk.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "?              ,.   (   .      )        .      \"",
+                        "         __        ??          (\"     )  )'     ,'        )  . (`     '`",
+                        "    (___()'`;   ???          .; )  ' (( (\" )    ;(,     ((  (  ;)  \"  )\")",
+                        "    /,___ /`                 _\"., ,._'_.,)_(..,( . )_  _' )_') (. _..( ' )",
+                        "    \\\\   \\\\                 |____|____|____|____|____|____|____|____|____|",
+                        "",
+                        "                                ~ WAFW00F : v2.4.2 ~",
+                        "                    ~ Sniffing Web Application Firewalls since 2009 ~",
+                        "",
+                        "[*] Checking http://plesk.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='plesk.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='plesk.alepuniv.edu.sy', port=80): Failed to resolve 'plesk.alepuniv.edu.sy' ([Errno -2] Name or service not known)\"))",
+                        "ERROR:wafw00f:Site plesk.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://plesk.alepuniv.edu.sy"
+                ]
+            },
+            "mail.researchjournal.alepuniv.edu.sy": {
+                "target": "http://mail.researchjournal.alepuniv.edu.sy",
+                "host": "mail.researchjournal.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "                  \u001b[1;97m/      \\",
+                        "                 \u001b[1;97m(  Woof! )",
+                        "                  \u001b[1;97m\\  ____/                      \u001b[1;91m)",
+                        "                  \u001b[1;97m,,                           \u001b[1;91m) (\u001b[1;93m_",
+                        "             \u001b[1;93m.-. \u001b[1;97m-    \u001b[1;92m_______                 \u001b[1;91m( \u001b[1;93m|__|",
+                        "            \u001b[1;93m()``; \u001b[1;92m|==|_______)                \u001b[1;91m.)\u001b[1;93m|__|",
+                        "            \u001b[1;93m/ ('        \u001b[1;92m/|\\                  \u001b[1;91m(  \u001b[1;93m|__|",
+                        "        \u001b[1;93m(  /  )       \u001b[1;92m / | \\                  \u001b[1;91m. \u001b[1;93m|__|",
+                        "         \u001b[1;93m\\(_)_))      \u001b[1;92m/  |  \\                   \u001b[1;93m|__|\u001b[0m",
+                        "",
+                        "                    \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "    The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://mail.researchjournal.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='mail.researchjournal.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='mail.researchjournal.alepuniv.edu.sy', port=80): Failed to resolve 'mail.researchjournal.alepuniv.edu.sy' ([Errno -2] Name or service not known)\"))",
+                        "ERROR:wafw00f:Site mail.researchjournal.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://mail.researchjournal.alepuniv.edu.sy"
+                ]
+            },
+            "my.alepuniv.edu.sy": {
+                "target": "http://my.alepuniv.edu.sy",
+                "host": "my.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "?              ,.   (   .      )        .      \"",
+                        "         __        ??          (\"     )  )'     ,'        )  . (`     '`",
+                        "    (___()'`;   ???          .; )  ' (( (\" )    ;(,     ((  (  ;)  \"  )\")",
+                        "    /,___ /`                 _\"., ,._'_.,)_(..,( . )_  _' )_') (. _..( ' )",
+                        "    \\\\   \\\\                 |____|____|____|____|____|____|____|____|____|",
+                        "",
+                        "                                ~ WAFW00F : v2.4.2 ~",
+                        "                    ~ Sniffing Web Application Firewalls since 2009 ~",
+                        "",
+                        "[*] Checking http://my.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='my.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='my.alepuniv.edu.sy', port=80): Failed to resolve 'my.alepuniv.edu.sy' ([Errno -2] Name or service not known)\"))",
+                        "ERROR:wafw00f:Site my.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://my.alepuniv.edu.sy"
+                ]
+            },
+            "postmaster.alepuniv.edu.sy": {
+                "target": "http://postmaster.alepuniv.edu.sy",
+                "host": "postmaster.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "?              ,.   (   .      )        .      \"",
+                        "         __        ??          (\"     )  )'     ,'        )  . (`     '`",
+                        "    (___()'`;   ???          .; )  ' (( (\" )    ;(,     ((  (  ;)  \"  )\")",
+                        "    /,___ /`                 _\"., ,._'_.,)_(..,( . )_  _' )_') (. _..( ' )",
+                        "    \\\\   \\\\                 |____|____|____|____|____|____|____|____|____|",
+                        "",
+                        "                                ~ WAFW00F : v2.4.2 ~",
+                        "                    ~ Sniffing Web Application Firewalls since 2009 ~",
+                        "",
+                        "[*] Checking http://postmaster.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='postmaster.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='postmaster.alepuniv.edu.sy', port=80): Failed to resolve 'postmaster.alepuniv.edu.sy' ([Errno -2] Name or service not known)\"))",
+                        "ERROR:wafw00f:Site postmaster.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://postmaster.alepuniv.edu.sy"
+                ]
+            },
+            "rdashboard.researchjournal.alepuniv.edu.sy": {
+                "target": "http://rdashboard.researchjournal.alepuniv.edu.sy",
+                "host": "rdashboard.researchjournal.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [
+                        "\u001b[1m\u001b[34mhttp://rdashboard.researchjournal.alepuniv.edu.sy\u001b[0m [301 Moved Permanently] \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mSYRIAN ARAB REPUBLIC\u001b[0m][\u001b[1m\u001b[31mSY\u001b[0m], \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36mnginx\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m188.247.31.161\u001b[0m], \u001b[1mRedirectLocation\u001b[0m[\u001b[0m\u001b[22mhttps://rdashboard.researchjournal.alepuniv.edu.sy/\u001b[0m], \u001b[1mTitle\u001b[0m[\u001b[1m\u001b[33m301 Moved Permanently\u001b[0m], \u001b[1mnginx\u001b[0m",
+                        "\u001b[1m\u001b[34mhttps://rdashboard.researchjournal.alepuniv.edu.sy/\u001b[0m [200 OK] \u001b[1mAccess-Control-Allow-Methods\u001b[0m[\u001b[0m\u001b[22mGET, POST, PUT, DELETE, OPTIONS\u001b[0m], \u001b[1mCookies\u001b[0m[\u001b[0m\u001b[22mXSRF-TOKEN,aleppo_university_research_journal_session\u001b[0m], \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mSYRIAN ARAB REPUBLIC\u001b[0m][\u001b[1m\u001b[31mSY\u001b[0m], \u001b[1mHTML5\u001b[0m, \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36mnginx\u001b[0m], \u001b[1mHttpOnly\u001b[0m[\u001b[0m\u001b[22maleppo_university_research_journal_session\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m188.247.31.161\u001b[0m], \u001b[1mPHP\u001b[0m[\u001b[1m\u001b[32m7.4.33,\u001b[0m], \u001b[1mPlesk\u001b[0m[\u001b[0m\u001b[22mLin\u001b[0m], \u001b[1mTitle\u001b[0m[\u001b[1m\u001b[33mBeetronix BCMS\u001b[0m], \u001b[1mUncommonHeaders\u001b[0m[\u001b[0m\u001b[22maccess-control-allow-origin,access-control-allow-methods,access-control-allow-headers\u001b[0m], \u001b[1mX-Powered-By\u001b[0m[\u001b[0m\u001b[22mPHP/7.4.33, PleskLin\u001b[0m], \u001b[1mnginx\u001b[0m"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "                  \u001b[1;97m/      \\",
+                        "                 \u001b[1;97m(  Woof! )",
+                        "                  \u001b[1;97m\\  ____/                      \u001b[1;91m)",
+                        "                  \u001b[1;97m,,                           \u001b[1;91m) (\u001b[1;93m_",
+                        "             \u001b[1;93m.-. \u001b[1;97m-    \u001b[1;92m_______                 \u001b[1;91m( \u001b[1;93m|__|",
+                        "            \u001b[1;93m()``; \u001b[1;92m|==|_______)                \u001b[1;91m.)\u001b[1;93m|__|",
+                        "            \u001b[1;93m/ ('        \u001b[1;92m/|\\                  \u001b[1;91m(  \u001b[1;93m|__|",
+                        "        \u001b[1;93m(  /  )       \u001b[1;92m / | \\                  \u001b[1;91m. \u001b[1;93m|__|",
+                        "         \u001b[1;93m\\(_)_))      \u001b[1;92m/  |  \\                   \u001b[1;93m|__|\u001b[0m",
+                        "",
+                        "                    \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "    The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://rdashboard.researchjournal.alepuniv.edu.sy",
+                        "[+] Generic Detection results:",
+                        "[*] The site http://rdashboard.researchjournal.alepuniv.edu.sy seems to be behind a WAF or some sort of security solution",
+                        "[~] Reason: The server returns a different response code when an attack string is used.",
+                        "Normal response code is \"200\", while the response code to cross-site scripting attack is \"403\"",
+                        "[~] Number of requests: 5"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [
+                        "http://rdashboard.researchjournal.alepuniv.edu.sy",
+                        "https://rdashboard.researchjournal.alepuniv.edu.sy"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://rdashboard.researchjournal.alepuniv.edu.sy",
+                    "https://rdashboard.researchjournal.alepuniv.edu.sy"
+                ]
+            },
+            "ns1.alepuniv.edu.sy": {
+                "target": "http://ns1.alepuniv.edu.sy",
+                "host": "ns1.alepuniv.edu.sy",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "               \u001b[1;97m/      \\",
+                        "              \u001b[1;97m(  W00f! )",
+                        "               \u001b[1;97m\\  ____/",
+                        "               \u001b[1;97m,,    \u001b[1;92m__            \u001b[1;93m404 Hack Not Found",
+                        "           \u001b[1;96m|`-.__   \u001b[1;92m/ /                     \u001b[1;91m __     __",
+                        "           \u001b[1;96m/\"  _/  \u001b[1;92m/_/                       \u001b[1;91m\\ \\   / /",
+                        "          \u001b[1;94m*===*    \u001b[1;92m/                          \u001b[1;91m\\ \\_/ /  \u001b[1;93m405 Not Allowed",
+                        "         \u001b[1;96m/     )__//                           \u001b[1;91m\\   /",
+                        "    \u001b[1;96m/|  /     /---`                        \u001b[1;93m403 Forbidden",
+                        "    \u001b[1;96m\\\\/`   \\ |                                 \u001b[1;91m/ _ \\",
+                        "    \u001b[1;96m`\\    /_\\\\_              \u001b[1;93m502 Bad Gateway  \u001b[1;91m/ / \\ \\  \u001b[1;93m500 Internal Error",
+                        "      \u001b[1;96m`_____``-`                             \u001b[1;91m/_/   \\_\\\\",
+                        "",
+                        "                        \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "        The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://ns1.alepuniv.edu.sy"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='ns1.alepuniv.edu.sy', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='ns1.alepuniv.edu.sy', port=80) at 0x7f2364489210>, 'Connection to ns1.alepuniv.edu.sy timed out. (connect timeout=7)'))",
+                        "ERROR:wafw00f:Site ns1.alepuniv.edu.sy appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://ns1.alepuniv.edu.sy"
+                ]
+            },
+            "188.247.31.161_80": {
+                "target": "https://188.247.31.161:80",
+                "host": "188.247.31.161:80",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "                  \u001b[1;97m/      \\",
+                        "                 \u001b[1;97m(  Woof! )",
+                        "                  \u001b[1;97m\\  ____/                      \u001b[1;91m)",
+                        "                  \u001b[1;97m,,                           \u001b[1;91m) (\u001b[1;93m_",
+                        "             \u001b[1;93m.-. \u001b[1;97m-    \u001b[1;92m_______                 \u001b[1;91m( \u001b[1;93m|__|",
+                        "            \u001b[1;93m()``; \u001b[1;92m|==|_______)                \u001b[1;91m.)\u001b[1;93m|__|",
+                        "            \u001b[1;93m/ ('        \u001b[1;92m/|\\                  \u001b[1;91m(  \u001b[1;93m|__|",
+                        "        \u001b[1;93m(  /  )       \u001b[1;92m / | \\                  \u001b[1;91m. \u001b[1;93m|__|",
+                        "         \u001b[1;93m\\(_)_))      \u001b[1;92m/  |  \\                   \u001b[1;93m|__|\u001b[0m",
+                        "",
+                        "                    \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "    The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking https://188.247.31.161:80"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='188.247.31.161', port=80): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:992)')))",
+                        "ERROR:wafw00f:Site 188.247.31.161 appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [
+                        "http://188.247.31.161:80"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "https://188.247.31.161:80",
+                    "http://188.247.31.161:80"
+                ]
+            },
+            "188.247.31.161_443": {
+                "target": "https://188.247.31.161:443",
+                "host": "188.247.31.161:443",
+                "whatweb": {
+                    "stdout": [
+                        "\u001b[1m\u001b[34mhttps://188.247.31.161:443\u001b[0m [200 OK] \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mSYRIAN ARAB REPUBLIC\u001b[0m][\u001b[1m\u001b[31mSY\u001b[0m], \u001b[1mHTML5\u001b[0m, \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36mnginx\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m188.247.31.161\u001b[0m], \u001b[1mMeta-Author\u001b[0m[\u001b[0m\u001b[22mZabbix SIA\u001b[0m], \u001b[1mPasswordField\u001b[0m[\u001b[0m\u001b[22mpassword\u001b[0m], \u001b[1mScript\u001b[0m, \u001b[1mTitle\u001b[0m[\u001b[1m\u001b[33mzabix: Zabbix\u001b[0m], \u001b[1mX-UA-Compatible\u001b[0m[\u001b[0m\u001b[22mIE=Edge\u001b[0m], \u001b[1mnginx\u001b[0m"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "                  \u001b[1;97m/      \\",
+                        "                 \u001b[1;97m(  Woof! )",
+                        "                  \u001b[1;97m\\  ____/                      \u001b[1;91m)",
+                        "                  \u001b[1;97m,,                           \u001b[1;91m) (\u001b[1;93m_",
+                        "             \u001b[1;93m.-. \u001b[1;97m-    \u001b[1;92m_______                 \u001b[1;91m( \u001b[1;93m|__|",
+                        "            \u001b[1;93m()``; \u001b[1;92m|==|_______)                \u001b[1;91m.)\u001b[1;93m|__|",
+                        "            \u001b[1;93m/ ('        \u001b[1;92m/|\\                  \u001b[1;91m(  \u001b[1;93m|__|",
+                        "        \u001b[1;93m(  /  )       \u001b[1;92m / | \\                  \u001b[1;91m. \u001b[1;93m|__|",
+                        "         \u001b[1;93m\\(_)_))      \u001b[1;92m/  |  \\                   \u001b[1;93m|__|\u001b[0m",
+                        "",
+                        "                    \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "    The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking https://188.247.31.161:443",
+                        "[+] Generic Detection results:",
+                        "[*] The site https://188.247.31.161:443 seems to be behind a WAF or some sort of security solution",
+                        "[~] Reason: The server returns a different response code when an attack string is used.",
+                        "Normal response code is \"200\", while the response code to cross-site scripting attack is \"403\"",
+                        "[~] Number of requests: 5"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [
+                        "http://188.247.31.161:443",
+                        "https://188.247.31.161:443"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "https://188.247.31.161:443",
+                    "http://188.247.31.161:443"
+                ]
+            },
+            "188.247.31.161_465": {
+                "target": "https://188.247.31.161:465",
+                "host": "188.247.31.161:465",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "?              ,.   (   .      )        .      \"",
+                        "         __        ??          (\"     )  )'     ,'        )  . (`     '`",
+                        "    (___()'`;   ???          .; )  ' (( (\" )    ;(,     ((  (  ;)  \"  )\")",
+                        "    /,___ /`                 _\"., ,._'_.,)_(..,( . )_  _' )_') (. _..( ' )",
+                        "    \\\\   \\\\                 |____|____|____|____|____|____|____|____|____|",
+                        "",
+                        "                                ~ WAFW00F : v2.4.2 ~",
+                        "                    ~ Sniffing Web Application Firewalls since 2009 ~",
+                        "",
+                        "[*] Checking https://188.247.31.161:465"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong ('Connection aborted.', BadStatusLine('220 researchjournal.alepuniv.edu.sy ESMTP Postfix\\r\\n'))",
+                        "ERROR:wafw00f:Site 188.247.31.161 appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "https://188.247.31.161:465"
+                ]
+            },
+            "213.178.227.168_80": {
+                "target": "https://213.178.227.168:80",
+                "host": "213.178.227.168:80",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "               \u001b[1;97m/      \\",
+                        "              \u001b[1;97m(  W00f! )",
+                        "               \u001b[1;97m\\  ____/",
+                        "               \u001b[1;97m,,    \u001b[1;92m__            \u001b[1;93m404 Hack Not Found",
+                        "           \u001b[1;96m|`-.__   \u001b[1;92m/ /                     \u001b[1;91m __     __",
+                        "           \u001b[1;96m/\"  _/  \u001b[1;92m/_/                       \u001b[1;91m\\ \\   / /",
+                        "          \u001b[1;94m*===*    \u001b[1;92m/                          \u001b[1;91m\\ \\_/ /  \u001b[1;93m405 Not Allowed",
+                        "         \u001b[1;96m/     )__//                           \u001b[1;91m\\   /",
+                        "    \u001b[1;96m/|  /     /---`                        \u001b[1;93m403 Forbidden",
+                        "    \u001b[1;96m\\\\/`   \\ |                                 \u001b[1;91m/ _ \\",
+                        "    \u001b[1;96m`\\    /_\\\\_              \u001b[1;93m502 Bad Gateway  \u001b[1;91m/ / \\ \\  \u001b[1;93m500 Internal Error",
+                        "      \u001b[1;96m`_____``-`                             \u001b[1;91m/_/   \\_\\\\",
+                        "",
+                        "                        \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "        The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking https://213.178.227.168:80"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='213.178.227.168', port=80): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:992)')))",
+                        "ERROR:wafw00f:Site 213.178.227.168 appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [
+                        "http://213.178.227.168:80"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "https://213.178.227.168:80",
+                    "http://213.178.227.168:80"
+                ]
+            },
+            "213.178.227.168_443": {
+                "target": "https://213.178.227.168:443",
+                "host": "213.178.227.168:443",
+                "whatweb": {
+                    "stdout": [
+                        "\u001b[1m\u001b[34mhttps://213.178.227.168:443\u001b[0m [200 OK] \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mSYRIAN ARAB REPUBLIC\u001b[0m][\u001b[1m\u001b[31mSY\u001b[0m], \u001b[1mHTML5\u001b[0m, \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36mnginx\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m213.178.227.168\u001b[0m], \u001b[1mScript\u001b[0m, \u001b[1mTitle\u001b[0m[\u001b[1m\u001b[33mWeb Server's Default Page\u001b[0m], \u001b[1mnginx\u001b[0m"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "                  \u001b[1;97m/      \\",
+                        "                 \u001b[1;97m(  Woof! )",
+                        "                  \u001b[1;97m\\  ____/                      \u001b[1;91m)",
+                        "                  \u001b[1;97m,,                           \u001b[1;91m) (\u001b[1;93m_",
+                        "             \u001b[1;93m.-. \u001b[1;97m-    \u001b[1;92m_______                 \u001b[1;91m( \u001b[1;93m|__|",
+                        "            \u001b[1;93m()``; \u001b[1;92m|==|_______)                \u001b[1;91m.)\u001b[1;93m|__|",
+                        "            \u001b[1;93m/ ('        \u001b[1;92m/|\\                  \u001b[1;91m(  \u001b[1;93m|__|",
+                        "        \u001b[1;93m(  /  )       \u001b[1;92m / | \\                  \u001b[1;91m. \u001b[1;93m|__|",
+                        "         \u001b[1;93m\\(_)_))      \u001b[1;92m/  |  \\                   \u001b[1;93m|__|\u001b[0m",
+                        "",
+                        "                    \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "    The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking https://213.178.227.168:443",
+                        "[+] Generic Detection results:",
+                        "[-] No WAF detected by the generic detection",
+                        "[~] Number of requests: 7"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [
+                        "http://213.178.227.168:443",
+                        "https://213.178.227.168:443"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "https://213.178.227.168:443",
+                    "http://213.178.227.168:443"
+                ]
+            },
+            "213.178.227.168_465": {
+                "target": "https://213.178.227.168:465",
+                "host": "213.178.227.168:465",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "               \u001b[1;97m/      \\",
+                        "              \u001b[1;97m(  W00f! )",
+                        "               \u001b[1;97m\\  ____/",
+                        "               \u001b[1;97m,,    \u001b[1;92m__            \u001b[1;93m404 Hack Not Found",
+                        "           \u001b[1;96m|`-.__   \u001b[1;92m/ /                     \u001b[1;91m __     __",
+                        "           \u001b[1;96m/\"  _/  \u001b[1;92m/_/                       \u001b[1;91m\\ \\   / /",
+                        "          \u001b[1;94m*===*    \u001b[1;92m/                          \u001b[1;91m\\ \\_/ /  \u001b[1;93m405 Not Allowed",
+                        "         \u001b[1;96m/     )__//                           \u001b[1;91m\\   /",
+                        "    \u001b[1;96m/|  /     /---`                        \u001b[1;93m403 Forbidden",
+                        "    \u001b[1;96m\\\\/`   \\ |                                 \u001b[1;91m/ _ \\",
+                        "    \u001b[1;96m`\\    /_\\\\_              \u001b[1;93m502 Bad Gateway  \u001b[1;91m/ / \\ \\  \u001b[1;93m500 Internal Error",
+                        "      \u001b[1;96m`_____``-`                             \u001b[1;91m/_/   \\_\\\\",
+                        "",
+                        "                        \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "        The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking https://213.178.227.168:465"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong ('Connection aborted.', BadStatusLine('220 plesk.alepuniv.edu.sy ESMTP Postfix (Ubuntu)\\r\\n'))",
+                        "ERROR:wafw00f:Site 213.178.227.168 appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "https://213.178.227.168:465"
+                ]
+            },
+            "213.178.227.168_993": {
+                "target": "https://213.178.227.168:993",
+                "host": "213.178.227.168:993",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "                  \u001b[1;97m/      \\",
+                        "                 \u001b[1;97m(  Woof! )",
+                        "                  \u001b[1;97m\\  ____/                      \u001b[1;91m)",
+                        "                  \u001b[1;97m,,                           \u001b[1;91m) (\u001b[1;93m_",
+                        "             \u001b[1;93m.-. \u001b[1;97m-    \u001b[1;92m_______                 \u001b[1;91m( \u001b[1;93m|__|",
+                        "            \u001b[1;93m()``; \u001b[1;92m|==|_______)                \u001b[1;91m.)\u001b[1;93m|__|",
+                        "            \u001b[1;93m/ ('        \u001b[1;92m/|\\                  \u001b[1;91m(  \u001b[1;93m|__|",
+                        "        \u001b[1;93m(  /  )       \u001b[1;92m / | \\                  \u001b[1;91m. \u001b[1;93m|__|",
+                        "         \u001b[1;93m\\(_)_))      \u001b[1;92m/  |  \\                   \u001b[1;93m|__|\u001b[0m",
+                        "",
+                        "                    \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "    The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking https://213.178.227.168:993"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='213.178.227.168', port=993): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL] tlsv1 alert no application protocol (_ssl.c:992)')))",
+                        "ERROR:wafw00f:Site 213.178.227.168 appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "https://213.178.227.168:993"
+                ]
+            },
+            "213.178.227.168_995": {
+                "target": "https://213.178.227.168:995",
+                "host": "213.178.227.168:995",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "               \u001b[1;97m/      \\",
+                        "              \u001b[1;97m(  W00f! )",
+                        "               \u001b[1;97m\\  ____/",
+                        "               \u001b[1;97m,,    \u001b[1;92m__            \u001b[1;93m404 Hack Not Found",
+                        "           \u001b[1;96m|`-.__   \u001b[1;92m/ /                     \u001b[1;91m __     __",
+                        "           \u001b[1;96m/\"  _/  \u001b[1;92m/_/                       \u001b[1;91m\\ \\   / /",
+                        "          \u001b[1;94m*===*    \u001b[1;92m/                          \u001b[1;91m\\ \\_/ /  \u001b[1;93m405 Not Allowed",
+                        "         \u001b[1;96m/     )__//                           \u001b[1;91m\\   /",
+                        "    \u001b[1;96m/|  /     /---`                        \u001b[1;93m403 Forbidden",
+                        "    \u001b[1;96m\\\\/`   \\ |                                 \u001b[1;91m/ _ \\",
+                        "    \u001b[1;96m`\\    /_\\\\_              \u001b[1;93m502 Bad Gateway  \u001b[1;91m/ / \\ \\  \u001b[1;93m500 Internal Error",
+                        "      \u001b[1;96m`_____``-`                             \u001b[1;91m/_/   \\_\\\\",
+                        "",
+                        "                        \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "        The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking https://213.178.227.168:995"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='213.178.227.168', port=995): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL] tlsv1 alert no application protocol (_ssl.c:992)')))",
+                        "ERROR:wafw00f:Site 213.178.227.168 appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "https://213.178.227.168:995"
+                ]
+            },
+            "213.178.227.168_8443": {
+                "target": "https://213.178.227.168:8443",
+                "host": "213.178.227.168:8443",
+                "whatweb": {
+                    "stdout": [
+                        "\u001b[1m\u001b[34mhttps://213.178.227.168:8443\u001b[0m [303 See Other] \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mSYRIAN ARAB REPUBLIC\u001b[0m][\u001b[1m\u001b[31mSY\u001b[0m], \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36msw-cp-server\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m213.178.227.168\u001b[0m], \u001b[0m\u001b[22mprobably\u001b[0m \u001b[1mPlesk\u001b[0m, \u001b[1mRedirectLocation\u001b[0m[\u001b[0m\u001b[22mhttps://213.178.227.168:8443/login.php\u001b[0m], \u001b[1mUncommonHeaders\u001b[0m[\u001b[0m\u001b[22mx-content-type-options\u001b[0m], \u001b[1mX-Frame-Options\u001b[0m[\u001b[0m\u001b[22mSAMEORIGIN\u001b[0m], \u001b[1mX-XSS-Protection\u001b[0m[\u001b[0m\u001b[22m1; mode=block\u001b[0m]",
+                        "\u001b[1m\u001b[34mhttps://213.178.227.168:8443/login.php\u001b[0m [303 See Other] \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mSYRIAN ARAB REPUBLIC\u001b[0m][\u001b[1m\u001b[31mSY\u001b[0m], \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36msw-cp-server\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m213.178.227.168\u001b[0m], \u001b[0m\u001b[22mprobably\u001b[0m \u001b[1mPlesk\u001b[0m, \u001b[1mRedirectLocation\u001b[0m[\u001b[0m\u001b[22mhttps://213.178.227.168:8443/login_up.php\u001b[0m], \u001b[1mUncommonHeaders\u001b[0m[\u001b[0m\u001b[22mx-content-type-options\u001b[0m], \u001b[1mX-Frame-Options\u001b[0m[\u001b[0m\u001b[22mSAMEORIGIN\u001b[0m], \u001b[1mX-XSS-Protection\u001b[0m[\u001b[0m\u001b[22m1; mode=block\u001b[0m]",
+                        "\u001b[1m\u001b[34mhttps://213.178.227.168:8443/login_up.php\u001b[0m [200 OK] \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mSYRIAN ARAB REPUBLIC\u001b[0m][\u001b[1m\u001b[31mSY\u001b[0m], \u001b[1mEmail\u001b[0m[\u001b[0m\u001b[22m50365a6fe24f4ff28f6b625410e04a35@sentry.io\u001b[0m], \u001b[1mHTML5\u001b[0m, \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36msw-cp-server\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m213.178.227.168\u001b[0m], \u001b[0m\u001b[22mprobably\u001b[0m \u001b[1mPlesk\u001b[0m, \u001b[1mPrototype\u001b[0m, \u001b[1mScript\u001b[0m[\u001b[0m\u001b[22mtext/javascript\u001b[0m], \u001b[1mTitle\u001b[0m[\u001b[1m\u001b[33memail server plesk\u001b[0m], \u001b[1mUncommonHeaders\u001b[0m[\u001b[0m\u001b[22mx-content-type-options\u001b[0m], \u001b[1mX-Frame-Options\u001b[0m[\u001b[0m\u001b[22mSAMEORIGIN\u001b[0m], \u001b[1mX-UA-Compatible\u001b[0m[\u001b[0m\u001b[22mIE=edge\u001b[0m], \u001b[1mX-XSS-Protection\u001b[0m[\u001b[0m\u001b[22m1; mode=block\u001b[0m]"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "?              ,.   (   .      )        .      \"",
+                        "         __        ??          (\"     )  )'     ,'        )  . (`     '`",
+                        "    (___()'`;   ???          .; )  ' (( (\" )    ;(,     ((  (  ;)  \"  )\")",
+                        "    /,___ /`                 _\"., ,._'_.,)_(..,( . )_  _' )_') (. _..( ' )",
+                        "    \\\\   \\\\                 |____|____|____|____|____|____|____|____|____|",
+                        "",
+                        "                                ~ WAFW00F : v2.4.2 ~",
+                        "                    ~ Sniffing Web Application Firewalls since 2009 ~",
+                        "",
+                        "[*] Checking https://213.178.227.168:8443",
+                        "[+] Generic Detection results:",
+                        "[-] No WAF detected by the generic detection",
+                        "[~] Number of requests: 7"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [
+                        "http://213.178.227.168:8443",
+                        "https://213.178.227.168:8443"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "https://213.178.227.168:8443",
+                    "http://213.178.227.168:8443"
+                ]
+            }
+        },
+        "discovered_targets": [
+            "http://alepuniv.edu.sy",
+            "http://www.alepuniv.edu.sy",
+            "http://dev.alepuniv.edu.sy",
+            "http://news.alepuniv.edu.sy",
+            "http://researchjournal.alepuniv.edu.sy",
+            "http://api.alepuniv.edu.sy",
+            "http://e-learning.alepuniv.edu.sy",
+            "http://click.alepuniv.edu.sy",
+            "http://ns2.alepuniv.edu.sy",
+            "http://mail.alepuniv.edu.sy",
+            "http://ww2.alepuniv.edu.sy",
+            "http://cdn.alepuniv.edu.sy",
+            "http://webplesk.alepuniv.edu.sy",
+            "http://webmail.alepuniv.edu.sy",
+            "https://webmail.alepuniv.edu.sy",
+            "http://mailplesk.alepuniv.edu.sy",
+            "https://mailplesk.alepuniv.edu.sy",
+            "http://plesk.alepuniv.edu.sy",
+            "http://mail.researchjournal.alepuniv.edu.sy",
+            "http://my.alepuniv.edu.sy",
+            "http://postmaster.alepuniv.edu.sy",
+            "http://rdashboard.researchjournal.alepuniv.edu.sy",
+            "https://rdashboard.researchjournal.alepuniv.edu.sy",
+            "http://ns1.alepuniv.edu.sy",
+            "https://188.247.31.161:80",
+            "http://188.247.31.161:80",
+            "https://188.247.31.161:443",
+            "http://188.247.31.161:443",
+            "https://188.247.31.161:465",
+            "https://213.178.227.168:80",
+            "http://213.178.227.168:80",
+            "https://213.178.227.168:443",
+            "http://213.178.227.168:443",
+            "https://213.178.227.168:465",
+            "https://213.178.227.168:993",
+            "https://213.178.227.168:995",
+            "https://213.178.227.168:8443",
+            "http://213.178.227.168:8443"
+        ]
+    }
+}

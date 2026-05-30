@@ -1,20 +1,22 @@
-FROM alpine:3.19
+FROM golang:1.24-alpine
 
 # تثبيت Python3 و Go و الأدوات المساعدة
 RUN apk update && apk add --no-cache \
     python3 \
-    go \
     git \
     bash \
     ca-certificates
 
-# إعداد بيئة Go لتثبيت أدوات الفuzzing
-ENV GOPATH /go
-ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
+# تثبيت الأدوات بالطريقة الرسمية بدلاً من بناءها من المصدر
+RUN wget https://github.com/ffuf/ffuf/releases/download/v2.1.0/ffuf_2.1.0_linux_amd64.tar.gz && \
+    tar -zxvf ffuf_2.1.0_linux_amd64.tar.gz && \
+    chmod +x ffuf && mv ffuf /usr/local/bin/ && \
+    rm -rf ffuf_2.1.0_linux_amd64.tar.gz
 
-# تثبيت الأدوات (ffuf و gobuster)
-RUN go install -v github.com/ffuf/ffuf/v2@latest && \
-    go install -v github.com/OJ/gobuster/v3@latest
+RUN wget https://github.com/OJ/gobuster/releases/download/v3.6.0/gobuster_Linux_x86_64.tar.gz && \
+    tar -zxvf gobuster_Linux_x86_64.tar.gz && \
+    chmod +x gobuster && mv gobuster /usr/local/bin/ && \
+    rm -rf gobuster_Linux_x86_64.tar.gz
 
 WORKDIR /app
 RUN mkdir -p /app/results
