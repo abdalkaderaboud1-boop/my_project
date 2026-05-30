@@ -1,0 +1,150 @@
+{
+    "metadata": {
+        "service": "fingerprinting-container",
+        "targets": [
+            "https://www.youtube.com",
+            "http://www.www.youtube.com",
+            "http://images.www.youtube.com"
+        ],
+        "mode": "quick",
+        "timestamp": "2026-05-22T20:39:12.102500",
+        "status": "completed"
+    },
+    "results": {
+        "per_target": {
+            "www.youtube.com": {
+                "target": "https://www.youtube.com",
+                "host": "www.youtube.com",
+                "whatweb": {
+                    "stdout": [
+                        "\u001b[1m\u001b[34mhttps://www.youtube.com\u001b[0m [200 OK] \u001b[1mCookies\u001b[0m[\u001b[0m\u001b[22mGPS,VISITOR_INFO1_LIVE,VISITOR_PRIVACY_METADATA,YSC,__Secure-ROLLOUT_TOKEN,__Secure-YEC,__Secure-YNID\u001b[0m], \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mUNITED STATES\u001b[0m][\u001b[1m\u001b[31mUS\u001b[0m], \u001b[1mFrame\u001b[0m, \u001b[1mHTML5\u001b[0m, \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36mESF\u001b[0m], \u001b[1mHttpOnly\u001b[0m[\u001b[0m\u001b[22mGPS,VISITOR_INFO1_LIVE,VISITOR_PRIVACY_METADATA,YSC,__Secure-ROLLOUT_TOKEN,__Secure-YEC,__Secure-YNID\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m142.250.73.142\u001b[0m], \u001b[1mOpen-Graph-Protocol\u001b[0m[\u001b[1m\u001b[31m87741124305\u001b[0m], \u001b[1mOpenSearch\u001b[0m[\u001b[0m\u001b[22mhttps://www.youtube.com/opensearch?locale=en_US\u001b[0m], \u001b[1mScript\u001b[0m, \u001b[1mStrict-Transport-Security\u001b[0m[\u001b[0m\u001b[22mmax-age=31536000\u001b[0m], \u001b[1mTitle\u001b[0m[\u001b[1m\u001b[33mYouTube\u001b[0m], \u001b[1mUncommonHeaders\u001b[0m[\u001b[0m\u001b[22mx-content-type-options,content-security-policy,permissions-policy,cross-origin-opener-policy,accept-ch,report-to,origin-trial,reporting-endpoints,document-policy,alt-svc\u001b[0m], \u001b[1mX-Frame-Options\u001b[0m[\u001b[0m\u001b[22mSAMEORIGIN\u001b[0m], \u001b[1mX-UA-Compatible\u001b[0m[\u001b[0m\u001b[22mIE=edge\u001b[0m], \u001b[1mX-XSS-Protection\u001b[0m[\u001b[0m\u001b[22m0\u001b[0m]"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "?              ,.   (   .      )        .      \"",
+                        "         __        ??          (\"     )  )'     ,'        )  . (`     '`",
+                        "    (___()'`;   ???          .; )  ' (( (\" )    ;(,     ((  (  ;)  \"  )\")",
+                        "    /,___ /`                 _\"., ,._'_.,)_(..,( . )_  _' )_') (. _..( ' )",
+                        "    \\\\   \\\\                 |____|____|____|____|____|____|____|____|____|",
+                        "",
+                        "                                ~ WAFW00F : v2.4.2 ~",
+                        "                    ~ Sniffing Web Application Firewalls since 2009 ~",
+                        "",
+                        "[*] Checking https://www.youtube.com",
+                        "[+] Generic Detection results:",
+                        "[-] No WAF detected by the generic detection",
+                        "[~] Number of requests: 7"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [
+                        "http://www.youtube.com",
+                        "https://www.youtube.com"
+                    ],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "https://www.youtube.com",
+                    "http://www.youtube.com"
+                ]
+            },
+            "www.www.youtube.com": {
+                "target": "http://www.www.youtube.com",
+                "host": "www.www.youtube.com",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "                  \u001b[1;97m/      \\",
+                        "                 \u001b[1;97m(  Woof! )",
+                        "                  \u001b[1;97m\\  ____/                      \u001b[1;91m)",
+                        "                  \u001b[1;97m,,                           \u001b[1;91m) (\u001b[1;93m_",
+                        "             \u001b[1;93m.-. \u001b[1;97m-    \u001b[1;92m_______                 \u001b[1;91m( \u001b[1;93m|__|",
+                        "            \u001b[1;93m()``; \u001b[1;92m|==|_______)                \u001b[1;91m.)\u001b[1;93m|__|",
+                        "            \u001b[1;93m/ ('        \u001b[1;92m/|\\                  \u001b[1;91m(  \u001b[1;93m|__|",
+                        "        \u001b[1;93m(  /  )       \u001b[1;92m / | \\                  \u001b[1;91m. \u001b[1;93m|__|",
+                        "         \u001b[1;93m\\(_)_))      \u001b[1;92m/  |  \\                   \u001b[1;93m|__|\u001b[0m",
+                        "",
+                        "                    \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "    The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://www.www.youtube.com"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='www.www.youtube.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='www.www.youtube.com', port=80): Failed to resolve 'www.www.youtube.com' ([Errno -2] Name or service not known)\"))",
+                        "ERROR:wafw00f:Site www.www.youtube.com appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://www.www.youtube.com"
+                ]
+            },
+            "images.www.youtube.com": {
+                "target": "http://images.www.youtube.com",
+                "host": "images.www.youtube.com",
+                "whatweb": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "wafw00f": {
+                    "stdout": [
+                        "\u001b[1;97m______",
+                        "               \u001b[1;97m/      \\",
+                        "              \u001b[1;97m(  W00f! )",
+                        "               \u001b[1;97m\\  ____/",
+                        "               \u001b[1;97m,,    \u001b[1;92m__            \u001b[1;93m404 Hack Not Found",
+                        "           \u001b[1;96m|`-.__   \u001b[1;92m/ /                     \u001b[1;91m __     __",
+                        "           \u001b[1;96m/\"  _/  \u001b[1;92m/_/                       \u001b[1;91m\\ \\   / /",
+                        "          \u001b[1;94m*===*    \u001b[1;92m/                          \u001b[1;91m\\ \\_/ /  \u001b[1;93m405 Not Allowed",
+                        "         \u001b[1;96m/     )__//                           \u001b[1;91m\\   /",
+                        "    \u001b[1;96m/|  /     /---`                        \u001b[1;93m403 Forbidden",
+                        "    \u001b[1;96m\\\\/`   \\ |                                 \u001b[1;91m/ _ \\",
+                        "    \u001b[1;96m`\\    /_\\\\_              \u001b[1;93m502 Bad Gateway  \u001b[1;91m/ / \\ \\  \u001b[1;93m500 Internal Error",
+                        "      \u001b[1;96m`_____``-`                             \u001b[1;91m/_/   \\_\\\\",
+                        "",
+                        "                        \u001b[1;96m~ WAFW00F : \u001b[1;94mv2.4.2 ~\u001b[1;97m",
+                        "        The Web Application Firewall Fingerprinting Toolkit",
+                        "    \u001b[0m",
+                        "[*] Checking http://images.www.youtube.com"
+                    ],
+                    "stderr": [
+                        "ERROR:wafw00f:Something went wrong HTTPConnectionPool(host='images.www.youtube.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='images.www.youtube.com', port=80): Failed to resolve 'images.www.youtube.com' ([Errno -2] Name or service not known)\"))",
+                        "ERROR:wafw00f:Site images.www.youtube.com appears to be down"
+                    ],
+                    "returncode": 0
+                },
+                "httprobe": {
+                    "stdout": [],
+                    "stderr": [],
+                    "returncode": 0
+                },
+                "discovered_targets": [
+                    "http://images.www.youtube.com"
+                ]
+            }
+        },
+        "discovered_targets": [
+            "https://www.youtube.com",
+            "http://www.youtube.com",
+            "http://www.www.youtube.com",
+            "http://images.www.youtube.com"
+        ]
+    }
+}
